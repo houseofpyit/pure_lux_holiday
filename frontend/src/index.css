@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 170 100% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 170 100% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 170 100% 15%;
+    --primary: 171 100% 21%;
+    --primary-foreground: 40 33% 96%;
+    --secondary: 170 15% 90%;
+    --secondary-foreground: 170 100% 15%;
+    --muted: 40 15% 93%;
+    --muted-foreground: 170 15% 40%;
+    --accent: 39 55% 62%;
+    --accent-foreground: 170 100% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 15% 90%;
+    --input: 40 15% 90%;
+    --ring: 171 100% 21%;
+    --radius: 1.5rem;
+    --chart-1: 171 100% 21%;
+    --chart-2: 39 55% 62%;
+    --chart-3: 170 100% 15%;
+    --chart-4: 41 56% 51%;
+    --chart-5: 40 33% 96%;
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Manrope', system-ui, sans-serif;
+    --font-accent: 'Great Vibes', cursive;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 170 100% 9%;
+    --sidebar-foreground: 40 33% 96%;
+    --sidebar-primary: 39 55% 62%;
+    --sidebar-primary-foreground: 170 100% 15%;
+    --sidebar-accent: 171 100% 18%;
+    --sidebar-accent-foreground: 40 33% 96%;
+    --sidebar-border: 170 40% 18%;
+    --sidebar-ring: 39 55% 62%;
+  }
+
+  .dark {
+    --background: 170 100% 8%;
+    --foreground: 40 33% 96%;
+    --card: 170 100% 10%;
+    --card-foreground: 40 33% 96%;
+    --popover: 170 100% 10%;
+    --popover-foreground: 40 33% 96%;
+    --primary: 39 55% 62%;
+    --primary-foreground: 170 100% 15%;
+    --secondary: 170 30% 15%;
+    --secondary-foreground: 40 33% 96%;
+    --muted: 170 30% 15%;
+    --muted-foreground: 40 20% 65%;
+    --accent: 39 55% 62%;
+    --accent-foreground: 170 100% 15%;
+    --destructive: 0 62% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 170 30% 20%;
+    --input: 170 30% 20%;
+    --ring: 39 55% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  /* Force light mode — ignore device/system dark mode */
+  /* This prevents any external dark-mode media queries from overriding our light theme */
+  :root {
+    color-scheme: light !important;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: light !important;
+    }
+    body {
+      background-color: hsl(40 33% 96%) !important;
+      color: hsl(170 100% 15%) !important;
+    }
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-primary;
+  }
+}
+
+@layer utilities {
+  .font-heading { font-family: var(--font-heading); }
+  .font-accent { font-family: var(--font-accent); }
+  .font-display { font-family: var(--font-display); }
+
+  .glass {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .glass-dark {
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+  }
+
+  .lux-shadow {
+    box-shadow: 0 20px 50px rgba(0, 77, 64, 0.06);
+  }
+
+  .lux-shadow-lg {
+    box-shadow: 0 30px 80px rgba(0, 77, 64, 0.1);
+  }
+
+  .text-shadow-lux {
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .blend-screen {
+    mix-blend-mode: screen;
+  }
+
+  .blend-multiply {
+    mix-blend-mode: multiply;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .article-body {
+    @apply text-muted-foreground leading-relaxed;
+  }
+  .article-body p {
+    @apply mb-5 text-base md:text-[1.05rem];
+  }
+  .article-body h1,
+  .article-body h2,
+  .article-body h3 {
+    @apply font-heading text-emerald-dark mt-10 mb-4 leading-tight;
+  }
+  .article-body h1 { @apply text-3xl md:text-4xl; }
+  .article-body h2 { @apply text-2xl md:text-3xl; }
+  .article-body h3 { @apply text-xl md:text-2xl; }
+  .article-body ul,
+  .article-body ol {
+    @apply mb-5 pl-6 space-y-2;
+  }
+  .article-body ul { @apply list-disc; }
+  .article-body ol { @apply list-decimal; }
+  .article-body a {
+    @apply text-emerald-dark border-b border-champagne/40 hover:border-champagne;
+  }
+  .article-body img {
+    @apply rounded-2xl my-8 w-full;
+  }
+  .article-body blockquote {
+    @apply border-l-2 border-champagne pl-5 italic font-heading text-xl text-emerald-dark my-8;
+  }
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(171 100% 21% / 0.3);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(171 100% 21% / 0.5);
+  }
+}

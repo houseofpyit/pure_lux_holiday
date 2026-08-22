@@ -1,0 +1,1523 @@
+{
+  "_meta": {
+    "brand": "Pure Luxe Holidays",
+    "usage": "Load with: python scripts/seed_website.py",
+    "images": "Unsplash URLs stored as media.file_url. Public frontend buildMediaUrl() already supports absolute https URLs."
+  },
+  "site_settings": {
+    "site_name": "Pure Luxe Holidays",
+    "tagline": "Luxury & Beyond",
+    "email": "concierge@pureluxeholidays.com",
+    "phone": "+91 261 400 1234",
+    "whatsapp": "+919261400123",
+    "address": "International Business Center, Vesu, Surat, Gujarat 395007, India",
+    "google_map_url": "https://maps.google.com/?q=International+Business+Center+Vesu+Surat",
+    "timezone": "Asia/Kolkata",
+    "default_language": "en",
+    "maintenance_mode": false,
+    "analytics_enabled": true
+  },
+  "contact_settings": {
+    "email": "concierge@pureluxeholidays.com",
+    "phone": "+91 261 400 1234",
+    "whatsapp": "+919261400123",
+    "address": "International Business Center, Vesu, Surat, Gujarat 395007, India",
+    "working_hours": "Monday – Saturday: 10:00 AM – 7:00 PM IST",
+    "google_map_url": "https://maps.google.com/?q=International+Business+Center+Vesu+Surat",
+    "emergency_number": "+91 98765 43210"
+  },
+  "contact_page": {
+    "hero_label": "Begin the Conversation",
+    "hero_heading": "Contact",
+    "hero_description": "Our travel specialists are ready to craft your next extraordinary journey.",
+    "hero_background_image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1800&q=80",
+    "hero_overlay_opacity": 0.55,
+    "hero_is_published": true,
+    "show_office_locations": true,
+    "show_business_hours": true,
+    "show_google_map": true,
+    "show_contact_form": true,
+    "show_social_links": true
+  },
+  "seo": {
+    "site_name": "Pure Luxe Holidays",
+    "website_url": "https://pureluxeholidays.com",
+    "default_meta_title": "Pure Luxe Holidays | Luxury Travel Agency in Surat",
+    "default_meta_description": "Surat's premier luxury travel concierge — bespoke holidays, private villas, honeymoons and international journeys crafted from Vesu, Gujarat.",
+    "default_keywords": "luxury travel Surat, travel agency Surat, luxury holidays Gujarat, honeymoon packages Surat, international tours Surat, bespoke travel India",
+    "canonical_url": "https://pureluxeholidays.com",
+    "default_robots": "index, follow",
+    "organization_name": "Pure Luxe Holidays",
+    "twitter_card": "summary_large_image",
+    "default_og_image_url": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80",
+    "schema_json": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"TravelAgency\",\"name\":\"Pure Luxe Holidays\",\"url\":\"https://pureluxeholidays.com\",\"telephone\":\"+912614001234\",\"email\":\"concierge@pureluxeholidays.com\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"International Business Center, Vesu\",\"addressLocality\":\"Surat\",\"addressRegion\":\"Gujarat\",\"postalCode\":\"395007\",\"addressCountry\":\"IN\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":21.1702,\"longitude\":72.8311},\"areaServed\":[\"Surat\",\"Gujarat\",\"India\"],\"description\":\"Luxury travel agency in Surat specialising in bespoke international holidays.\"}]}"
+  },
+  "page_seo": [
+    {
+      "page_key": "home",
+      "slug": "/",
+      "meta_title": "Luxury Travel Agency in Surat | Pure Luxe Holidays",
+      "meta_description": "Plan bespoke luxury holidays from Surat — Maldives, Europe, Bali, Dubai and more. Personal concierge, private villas and curated itineraries.",
+      "keywords": "luxury travel Surat, travel agency Surat, luxury holidays Gujarat",
+      "priority": 1.0,
+      "change_frequency": "weekly"
+    },
+    {
+      "page_key": "about",
+      "slug": "/about",
+      "meta_title": "About Pure Luxe Holidays | Surat Luxury Travel Experts",
+      "meta_description": "Meet the Surat-based team crafting bespoke luxury journeys since 2009. Discretion, beauty, and itineraries written around how you travel.",
+      "keywords": "about Pure Luxe Holidays, luxury travel Surat team",
+      "priority": 0.8,
+      "change_frequency": "monthly"
+    },
+    {
+      "page_key": "destinations",
+      "slug": "/destinations",
+      "meta_title": "Luxury Destinations from Surat | Pure Luxe Holidays",
+      "meta_description": "Explore handpicked destinations for Surat travellers — Maldives, Swiss Alps, Bali, Dubai, Santorini and beyond.",
+      "keywords": "luxury destinations Surat, international travel Gujarat",
+      "priority": 0.9,
+      "change_frequency": "weekly"
+    },
+    {
+      "page_key": "experiences",
+      "slug": "/experiences",
+      "meta_title": "Luxury Travel Experiences | Pure Luxe Holidays Surat",
+      "meta_description": "Curated luxury experiences — safaris, yacht charters, wellness retreats and private dining for discerning travellers in Surat.",
+      "keywords": "luxury experiences Surat, bespoke travel Gujarat",
+      "priority": 0.8,
+      "change_frequency": "weekly"
+    },
+    {
+      "page_key": "packages",
+      "slug": "/packages",
+      "meta_title": "Luxury Holiday Packages from Surat | Pure Luxe Holidays",
+      "meta_description": "Browse signature luxury packages curated for Surat families, couples and honeymooners. All journeys are fully bespoke.",
+      "keywords": "luxury packages Surat, honeymoon packages Gujarat, holiday packages Surat",
+      "priority": 0.9,
+      "change_frequency": "weekly"
+    },
+    {
+      "page_key": "gallery",
+      "slug": "/gallery",
+      "meta_title": "Travel Gallery | Pure Luxe Holidays Surat",
+      "meta_description": "Inspiring imagery from our luxury journeys — destinations, villas, and experiences crafted for Surat travellers.",
+      "keywords": "luxury travel gallery Surat",
+      "priority": 0.6,
+      "change_frequency": "monthly"
+    },
+    {
+      "page_key": "journal",
+      "slug": "/journal",
+      "meta_title": "Travel Journal | Luxury Travel Inspiration from Surat",
+      "meta_description": "Stories, guides and inspiration for luxury travellers from Surat — destination tips, seasonal advice and journey ideas.",
+      "keywords": "travel blog Surat, luxury travel journal Gujarat",
+      "priority": 0.7,
+      "change_frequency": "weekly"
+    },
+    {
+      "page_key": "contact",
+      "slug": "/contact",
+      "meta_title": "Contact Pure Luxe Holidays | Surat Office",
+      "meta_description": "Visit our Surat office in Vesu or speak to our luxury travel concierge. Plan your next bespoke journey today.",
+      "keywords": "contact travel agency Surat, luxury travel Vesu, Pure Luxe Holidays Surat",
+      "priority": 0.8,
+      "change_frequency": "monthly"
+    },
+    {
+      "page_key": "plan-my-journey",
+      "slug": "/plan-my-journey",
+      "meta_title": "Plan My Journey | Bespoke Luxury Travel from Surat",
+      "meta_description": "Tell us your dream destination and our Surat concierge will craft a bespoke luxury itinerary within 24 hours.",
+      "keywords": "plan luxury holiday Surat, bespoke travel enquiry Gujarat",
+      "priority": 0.9,
+      "change_frequency": "monthly"
+    },
+    {
+      "page_key": "testimonials",
+      "slug": "/testimonials",
+      "meta_title": "Client Testimonials | Pure Luxe Holidays Surat",
+      "meta_description": "Read reviews from Surat and Gujarat travellers who trusted Pure Luxe Holidays for their luxury journeys.",
+      "keywords": "travel agency reviews Surat, luxury travel testimonials Gujarat",
+      "priority": 0.6,
+      "change_frequency": "monthly"
+    },
+    {
+      "page_key": "faq",
+      "slug": "/faq",
+      "meta_title": "FAQ | Pure Luxe Holidays Surat",
+      "meta_description": "Frequently asked questions about booking luxury travel with Pure Luxe Holidays from Surat, Gujarat.",
+      "keywords": "luxury travel FAQ Surat",
+      "priority": 0.5,
+      "change_frequency": "monthly"
+    },
+    {
+      "page_key": "privacy",
+      "slug": "/privacy",
+      "meta_title": "Privacy Policy | Pure Luxe Holidays",
+      "meta_description": "Privacy policy for Pure Luxe Holidays — luxury travel agency based in Surat, Gujarat, India.",
+      "keywords": "privacy policy Pure Luxe Holidays",
+      "priority": 0.3,
+      "change_frequency": "yearly",
+      "robots": "index, follow"
+    },
+    {
+      "page_key": "terms",
+      "slug": "/terms",
+      "meta_title": "Terms & Conditions | Pure Luxe Holidays",
+      "meta_description": "Terms and conditions for booking luxury travel services with Pure Luxe Holidays, Surat.",
+      "keywords": "terms Pure Luxe Holidays",
+      "priority": 0.3,
+      "change_frequency": "yearly",
+      "robots": "index, follow"
+    }
+  ],
+  "robots_settings": {
+    "robots_content": "User-agent: *\nAllow: /\nSitemap: https://pureluxeholidays.com/sitemap.xml"
+  },
+  "cta": {
+    "title": "Let Us Design Your Next Journey",
+    "subtitle": "Share a few wishes. A specialist will reply within 24 hours with a considered first outline.",
+    "button_text": "Plan My Journey",
+    "button_url": "/plan-my-journey",
+    "background_image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80",
+    "is_active": true
+  },
+  "hero": {
+    "title": "Journeys Beyond Ordinary",
+    "subtitle": "Luxury & Beyond",
+    "description": "Private villas, quiet islands, and itineraries written around how you actually travel — never a template.",
+    "button_text": "Explore Collections",
+    "button_url": "/packages",
+    "secondary_button_text": "Speak to Concierge",
+    "secondary_button_url": "/contact",
+    "background_image_url": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2000&q=80",
+    "overlay_opacity": 0.45,
+    "is_active": true
+  },
+  "home_about": {
+    "eyebrow": "Our Story",
+    "heading": "Crafting Journeys That Stay With You",
+    "description": "Since 2009 we have designed private travel for guests who expect discretion, beauty, and time well spent. Every itinerary begins with a blank page — and a long conversation.",
+    "button_text": "Know Our Story",
+    "button_url": "/about",
+    "image_url": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1400&q=80",
+    "image_alt": "Travellers overlooking a tropical lagoon at dusk",
+    "is_active": true
+  },
+  "navigation": [
+    { "title": "Home", "slug": "home", "url": "/", "order": 0 },
+    { "title": "Destinations", "slug": "destinations", "url": "/destinations", "order": 1 },
+    { "title": "Experiences", "slug": "experiences", "url": "/experiences", "order": 2 },
+    { "title": "Luxury Packages", "slug": "packages", "url": "/packages", "order": 3 },
+    { "title": "Gallery", "slug": "gallery", "url": "/gallery", "order": 4 },
+    { "title": "Journal", "slug": "journal", "url": "/journal", "order": 5 },
+    { "title": "About", "slug": "about", "url": "/about", "order": 6 },
+    { "title": "Contact", "slug": "contact", "url": "/contact", "order": 7 }
+  ],
+  "footer": [
+    {
+      "title": "Quick Links",
+      "order": 0,
+      "links": [
+        { "title": "Destinations", "url": "/destinations", "order": 0 },
+        { "title": "Experiences", "url": "/experiences", "order": 1 },
+        { "title": "Luxury Packages", "url": "/packages", "order": 2 },
+        { "title": "Gallery", "url": "/gallery", "order": 3 },
+        { "title": "Travel Journal", "url": "/journal", "order": 4 }
+      ]
+    },
+    {
+      "title": "Company",
+      "order": 1,
+      "links": [
+        { "title": "About Us", "url": "/about", "order": 0 },
+        { "title": "Testimonials", "url": "/testimonials", "order": 1 },
+        { "title": "FAQ", "url": "/faq", "order": 2 },
+        { "title": "Contact", "url": "/contact", "order": 3 },
+        { "title": "Plan My Journey", "url": "/plan-my-journey", "order": 4 }
+      ]
+    },
+    {
+      "title": "Legal",
+      "order": 2,
+      "links": [
+        { "title": "Privacy Policy", "url": "/privacy", "order": 0 },
+        { "title": "Terms & Conditions", "url": "/terms", "order": 1 }
+      ]
+    }
+  ],
+  "statistics": [
+    { "title": "Years of Craft", "value": "15", "suffix": "+", "icon": "Clock", "display_order": 0 },
+    { "title": "Destinations", "value": "120", "suffix": "+", "icon": "Globe", "display_order": 1 },
+    { "title": "Private Journeys", "value": "4", "suffix": "k+", "icon": "Plane", "display_order": 2 },
+    { "title": "Guest Rating", "value": "4.9", "suffix": "/5", "icon": "Star", "display_order": 3 }
+  ],
+  "why_choose_us": [
+    {
+      "title": "A Blank Canvas",
+      "description": "We never sell a catalogue trip. Your dates, pace, and privacy shape the itinerary from the first call.",
+      "icon": "Compass",
+      "display_order": 0
+    },
+    {
+      "title": "Access, Not Noise",
+      "description": "Private villas, after-hours museums, and tables that do not appear online — arranged quietly on your behalf.",
+      "icon": "Gem",
+      "display_order": 1
+    },
+    {
+      "title": "One Concierge",
+      "description": "A dedicated specialist stays with you from enquiry through return — WhatsApp, phone, and on-ground partners.",
+      "icon": "Heart",
+      "display_order": 2
+    },
+    {
+      "title": "Details That Linger",
+      "description": "Arrival flowers, a boat at golden hour, the right room orientation. Small things, considered carefully.",
+      "icon": "Sparkles",
+      "display_order": 3
+    }
+  ],
+  "collections": [
+    {
+      "title": "Signature Escapes",
+      "slug": "signature-escapes",
+      "short_description": "Our most complete private journeys — villas, transfers, and a concierge who stays with you throughout.",
+      "image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "View Collection",
+      "button_url": "/packages?collection=signature-escapes",
+      "display_order": 0
+    },
+    {
+      "title": "Honeymoon",
+      "slug": "honeymoon",
+      "short_description": "Quiet islands, caldera suites, and weeks designed for two — never a template honeymoon.",
+      "image_url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "View Collection",
+      "button_url": "/packages?collection=honeymoon",
+      "display_order": 1
+    },
+    {
+      "title": "Wellness Retreats",
+      "slug": "wellness-retreats",
+      "short_description": "Space, silence, and programmes written around your rhythm — not a group schedule.",
+      "image_url": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "View Collection",
+      "button_url": "/packages?collection=wellness-retreats",
+      "display_order": 2
+    },
+    {
+      "title": "Adventure & Safaris",
+      "slug": "adventure-safaris",
+      "short_description": "Wilderness with the same standard of care — private camps, guides, and unhurried days.",
+      "image_url": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "View Collection",
+      "button_url": "/packages?collection=adventure-safaris",
+      "display_order": 3
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Maldives",
+      "slug": "maldives",
+      "country": "Maldives",
+      "short_description": "Private overwater villas, crystal lagoons, and dining beneath the stars.",
+      "image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Explore Maldives",
+      "button_url": "/packages/maldives-overwater-sanctuary",
+      "is_featured": true,
+      "display_order": 0
+    },
+    {
+      "name": "Switzerland",
+      "slug": "switzerland",
+      "country": "Switzerland",
+      "short_description": "Matterhorn mornings, glacier light, and chalets with a fire already lit.",
+      "image_url": "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Discover Alps",
+      "button_url": "/packages/zermatt-alpine-atelier",
+      "is_featured": true,
+      "display_order": 1
+    },
+    {
+      "name": "Bali",
+      "slug": "bali",
+      "country": "Indonesia",
+      "short_description": "Jungle pool villas, temple dawns, and Uluwatu cliffs at sunset.",
+      "image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Experience Bali",
+      "button_url": "/packages/bali-jungle-sanctuary",
+      "is_featured": true,
+      "display_order": 2
+    },
+    {
+      "name": "Dubai",
+      "slug": "dubai",
+      "country": "United Arab Emirates",
+      "short_description": "Skyline suites, desert camps, and a yacht waiting in Dubai Marina.",
+      "image_url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Unveil Dubai",
+      "button_url": "/packages/dubai-skyline-and-dunes",
+      "is_featured": true,
+      "display_order": 3
+    },
+    {
+      "name": "Santorini",
+      "slug": "santorini",
+      "country": "Greece",
+      "short_description": "Caldera suites, private catamarans, and wine from volcanic soil.",
+      "image_url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "See Santorini",
+      "button_url": "/packages",
+      "is_featured": true,
+      "display_order": 4
+    },
+    {
+      "name": "Masai Mara",
+      "slug": "masai-mara",
+      "country": "Kenya",
+      "short_description": "Exclusive-use camps, dawn game drives, and the great migration in season.",
+      "image_url": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Open Safari",
+      "button_url": "/packages",
+      "is_featured": false,
+      "display_order": 5
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Private Yacht Days",
+      "slug": "private-yacht-days",
+      "short_description": "A skipper, a chef, and a coastline that is yours until sunset.",
+      "icon": "Ship",
+      "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Enquire",
+      "button_url": "/plan-my-journey",
+      "display_order": 0
+    },
+    {
+      "title": "After-Hours Culture",
+      "slug": "after-hours-culture",
+      "short_description": "Galleries and palaces opened quietly, with a curator just for you.",
+      "icon": "Landmark",
+      "image_url": "https://images.unsplash.com/photo-1554907984-15207efa2d4c?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Enquire",
+      "button_url": "/plan-my-journey",
+      "display_order": 1
+    },
+    {
+      "title": "Wilderness & Light",
+      "slug": "wilderness-and-light",
+      "short_description": "Heli-skiing, desert camps, and dawn on the savannah — privately guided.",
+      "icon": "Mountain",
+      "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Enquire",
+      "button_url": "/plan-my-journey",
+      "display_order": 2
+    },
+    {
+      "title": "Wellness Sanctuaries",
+      "slug": "wellness-sanctuaries",
+      "short_description": "Silent mornings, spa residences, and programmes written around your rhythm.",
+      "icon": "Sparkles",
+      "image_url": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80",
+      "button_text": "Enquire",
+      "button_url": "/plan-my-journey",
+      "display_order": 3
+    }
+  ],
+  "package_categories": [
+    { "name": "Signature Escapes", "slug": "signature-escapes", "description": "Our most complete private journeys.", "display_order": 0 },
+    { "name": "Honeymoon", "slug": "honeymoon", "description": "Journeys for two — private, unhurried, and entirely yours.", "display_order": 1 },
+    { "name": "Wellness Retreats", "slug": "wellness-retreats", "description": "Space, silence, and restoration.", "display_order": 2 },
+    { "name": "Adventure & Safaris", "slug": "adventure-safaris", "description": "Wilderness with the same standard of care.", "display_order": 3 }
+  ],
+  "packages": [
+    {
+      "category_slug": "signature-escapes",
+      "title": "Maldives Overwater Sanctuary",
+      "slug": "maldives-overwater-sanctuary",
+      "short_description": "Five nights in a private overwater residence — lagoon, chef, and a boat that leaves when you do.",
+      "description": "<p>Baa Atoll, a UNESCO biosphere, is the setting. Your residence sits above an emerald lagoon: a slide into the sea, a deck for sunrise yoga, and a retractable roof for sleeping under the stars.</p><p>This is not a resort itinerary. A butler, a chef, and a skipper work to your hours. We refine every transfer, meal, and spa hour with you before you fly.</p>",
+      "country": "Maldives",
+      "city": "Baa Atoll",
+      "duration_days": 6,
+      "duration_nights": 5,
+      "starting_price": 12500,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1800&q=80",
+      "seo_title": "Maldives Overwater Sanctuary | Pure Luxe Holidays",
+      "seo_description": "A private overwater villa journey in Baa Atoll with yacht transfers, a dedicated butler, and lagoon dining.",
+      "highlights": [
+        { "title": "Private yacht arrival", "icon": "Ship", "display_order": 0 },
+        { "title": "Dedicated butler", "icon": "UserCheck", "display_order": 1 },
+        { "title": "Overwater spa hours", "icon": "Sparkles", "display_order": 2 },
+        { "title": "Sunset dolphin cruise", "icon": "Sun", "display_order": 3 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Seaplane & first lagoon evening", "description": "Meet-and-greet in Male, private seaplane, and a quiet arrival with champagne on the deck.", "hotel": "Private overwater residence", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Lagoon & spa", "description": "Snorkel the house reef at your pace. Afternoon overwater massage and a chef’s tasting at dusk.", "hotel": "Private overwater residence", "meal_plan": "Full board", "display_order": 1 },
+        { "day_number": 3, "title": "Sandbank picnic", "description": "A deserted sandbank, a shaded table, and the boat standing by. Evening at leisure.", "hotel": "Private overwater residence", "meal_plan": "Full board", "display_order": 2 },
+        { "day_number": 4, "title": "Dolphin cruise & underwater dining", "description": "Golden-hour dolphins, then a table set over the lagoon if you wish.", "hotel": "Private overwater residence", "meal_plan": "Full board", "display_order": 3 },
+        { "day_number": 5, "title": "Your unhurried day", "description": "Held open for diving, a spa ritual, or simply the deck. We adjust on the morning.", "hotel": "Private overwater residence", "meal_plan": "Full board", "display_order": 4 },
+        { "day_number": 6, "title": "Departure", "description": "Breakfast facing the reef, then a private transfer timed to your international flight.", "hotel": "—", "meal_plan": "Breakfast", "display_order": 5 }
+      ],
+      "inclusions": [
+        { "title": "Private seaplane or yacht transfers", "display_order": 0 },
+        { "title": "Five nights in a private overwater residence", "display_order": 1 },
+        { "title": "Daily breakfast and selected dining", "display_order": 2 },
+        { "title": "Dedicated butler and concierge", "display_order": 3 },
+        { "title": "One sunset cruise", "display_order": 4 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Premium wines and spa treatments beyond the included hours", "display_order": 1 },
+        { "title": "Travel insurance", "display_order": 2 }
+      ],
+      "faqs": [
+        { "question": "Is this exclusive-use?", "answer": "The residence is private to your party. The wider island has other guests unless you request a fully private island — we can arrange that separately.", "display_order": 0 },
+        { "question": "Best months?", "answer": "December to April is typically driest. May to November can be greener, with excellent diving and quieter resorts.", "display_order": 1 }
+      ],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "signature-escapes",
+      "title": "Zermatt Alpine Atelier",
+      "slug": "zermatt-alpine-atelier",
+      "short_description": "Four nights in a designer chalet — first tracks, glacier light, and a table that knows your name.",
+      "description": "<p>Zermatt is car-free and impossibly beautiful in winter. Your chalet looks toward the Matterhorn. A ski host, a driver for valley days, and a chef if you prefer not to leave the fire.</p>",
+      "country": "Switzerland",
+      "city": "Zermatt",
+      "duration_days": 5,
+      "duration_nights": 4,
+      "starting_price": 9800,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80",
+      "seo_title": "Zermatt Alpine Atelier | Pure Luxe Holidays",
+      "highlights": [
+        { "title": "Private ski host", "icon": "Snowflake", "display_order": 0 },
+        { "title": "Heli-skiing option", "icon": "Plane", "display_order": 1 },
+        { "title": "Chalet chef evenings", "icon": "UtensilsCrossed", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Arrival by train or helicopter", "description": "Zurich or Geneva to Zermatt. Fire lit, wine open, Matterhorn in the window.", "hotel": "Private chalet, Zermatt", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "First tracks", "description": "A private instructor on the glacier and into Cervinia if conditions allow.", "hotel": "Private chalet, Zermatt", "meal_plan": "Breakfast & lunch", "display_order": 1 },
+        { "day_number": 3, "title": "Heli or spa", "description": "Heli-skiing on Monte Rosa, or a thermal spa day if you prefer silence.", "hotel": "Private chalet, Zermatt", "meal_plan": "Breakfast & dinner", "display_order": 2 },
+        { "day_number": 4, "title": "Village & wine", "description": "Unhurried morning. Afternoon tasting of Valais wines by the fire.", "hotel": "Private chalet, Zermatt", "meal_plan": "Breakfast & dinner", "display_order": 3 },
+        { "day_number": 5, "title": "Departure", "description": "Breakfast, then a timed transfer to your onward flight.", "hotel": "—", "meal_plan": "Breakfast", "display_order": 4 }
+      ],
+      "inclusions": [
+        { "title": "Four nights private chalet", "display_order": 0 },
+        { "title": "Daily breakfast", "display_order": 1 },
+        { "title": "Two days private ski guiding", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "Ski lift passes and equipment hire", "display_order": 0 },
+        { "title": "Heli-skiing (quoted separately)", "display_order": 1 }
+      ],
+      "faqs": [
+        { "question": "Is this only for skiers?", "answer": "No. Non-skiers can walk, spa, and take the Gornergrat. We rewrite the days around who is travelling.", "display_order": 0 }
+      ],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "wellness-retreats",
+      "title": "Bali Jungle Sanctuary",
+      "slug": "bali-jungle-sanctuary",
+      "short_description": "A week in Ubud’s canopy — yoga at dawn, a private chef, and temples when the crowds have gone.",
+      "description": "<p>A pool villa above the rice terraces. Mornings are quiet. We arrange a yoga teacher, a driver who knows the back roads, and a blessing at a temple before the day begins for everyone else.</p>",
+      "country": "Indonesia",
+      "city": "Ubud",
+      "duration_days": 8,
+      "duration_nights": 7,
+      "starting_price": 7200,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Private yoga", "icon": "Heart", "display_order": 0 },
+        { "title": "Villa chef", "icon": "UtensilsCrossed", "display_order": 1 },
+        { "title": "Temple at dawn", "icon": "Sunrise", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Arrival & villa evening", "description": "Private transfer from DPS. Welcome ceremony and a light supper on the terrace.", "hotel": "Private jungle villa, Ubud", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Yoga & rice terraces", "description": "Dawn practice, then a quiet walk through Tegallalang with a local guide.", "hotel": "Private jungle villa, Ubud", "meal_plan": "Full board", "display_order": 1 },
+        { "day_number": 3, "title": "Spa day", "description": "Held at the villa. Optional water blessing nearby.", "hotel": "Private jungle villa, Ubud", "meal_plan": "Full board", "display_order": 2 },
+        { "day_number": 4, "title": "Uluwatu sunset", "description": "Coastal afternoon and a cliff-side dinner.", "hotel": "Private jungle villa, Ubud", "meal_plan": "Breakfast & dinner", "display_order": 3 },
+        { "day_number": 5, "title": "Your pace", "description": "Open day — craft, cooking, or simply the pool.", "hotel": "Private jungle villa, Ubud", "meal_plan": "Full board", "display_order": 4 },
+        { "day_number": 6, "title": "Temple dawn", "description": "Besakih or a smaller shrine, timed before visitors arrive.", "hotel": "Private jungle villa, Ubud", "meal_plan": "Full board", "display_order": 5 },
+        { "day_number": 7, "title": "Last evening", "description": "Chef’s farewell menu. Packing at leisure.", "hotel": "Private jungle villa, Ubud", "meal_plan": "Full board", "display_order": 6 },
+        { "day_number": 8, "title": "Departure", "description": "Transfer timed to your flight.", "hotel": "—", "meal_plan": "Breakfast", "display_order": 7 }
+      ],
+      "inclusions": [
+        { "title": "Seven nights private villa", "display_order": 0 },
+        { "title": "Daily yoga (six mornings)", "display_order": 1 },
+        { "title": "Private driver on selected days", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Visa on arrival if required", "display_order": 1 }
+      ],
+      "faqs": [
+        { "question": "Suitable for families?", "answer": "Yes, with connecting rooms or a second villa. We adjust yoga and temple visits for children.", "display_order": 0 }
+      ],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "signature-escapes",
+      "title": "Dubai Skyline & Dunes",
+      "slug": "dubai-skyline-and-dunes",
+      "short_description": "Three nights above the city, two under desert stars — yacht, gallery, and a camp that is only yours.",
+      "description": "<p>Begin in a skyline suite. A yacht afternoon in the Marina. Then the desert: an exclusive camp, a table in the dunes, and silence after the last light.</p>",
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "duration_days": 6,
+      "duration_nights": 5,
+      "starting_price": 8900,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": false,
+      "featured_image_url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Marina yacht", "icon": "Ship", "display_order": 0 },
+        { "title": "Private desert camp", "icon": "Tent", "display_order": 1 },
+        { "title": "VIP airport", "icon": "Plane", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "VIP arrival", "description": "Meet-and-assist, suite check-in, evening at leisure.", "hotel": "Downtown skyline suite", "meal_plan": "—", "display_order": 0 },
+        { "day_number": 2, "title": "City & yacht", "description": "Private gallery hour, then a Marina cruise at golden hour.", "hotel": "Downtown skyline suite", "meal_plan": "Lunch on board", "display_order": 1 },
+        { "day_number": 3, "title": "Your Dubai", "description": "Held open for shopping, spa, or a second gallery.", "hotel": "Downtown skyline suite", "meal_plan": "Breakfast", "display_order": 2 },
+        { "day_number": 4, "title": "Into the dunes", "description": "Afternoon transfer to an exclusive-use camp. Dinner under the sky.", "hotel": "Private desert camp", "meal_plan": "Dinner", "display_order": 3 },
+        { "day_number": 5, "title": "Desert morning", "description": "Sunrise, a quiet breakfast, optional falconry. Return to the city or stay a last night in camp.", "hotel": "Private desert camp", "meal_plan": "Breakfast & dinner", "display_order": 4 },
+        { "day_number": 6, "title": "Departure", "description": "VIP outbound assistance.", "hotel": "—", "meal_plan": "Breakfast", "display_order": 5 }
+      ],
+      "inclusions": [
+        { "title": "Five nights as described", "display_order": 0 },
+        { "title": "VIP airport assistance both ways", "display_order": 1 },
+        { "title": "Private yacht afternoon", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "Alcohol where not included by the venue", "display_order": 0 },
+        { "title": "International flights", "display_order": 1 }
+      ],
+      "faqs": [
+        { "question": "Summer travel?", "answer": "June to September is very hot. We shift more hours to early morning and evening, and often recommend a later season.", "display_order": 0 }
+      ],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "honeymoon",
+      "title": "Santorini Caldera Honeymoon",
+      "slug": "santorini-caldera-honeymoon",
+      "short_description": "Six nights in a caldera suite — private catamaran, volcanic wine, and evenings with nowhere to be.",
+      "description": "<p>Santorini at its quietest: a suite facing the caldera, a table set for two at sunset, and a catamaran that leaves when you are ready — not when the schedule says so.</p><p>We hold the mornings open. The wine tasting is private. The photographer comes once, if you want them, and disappears.</p>",
+      "country": "Greece",
+      "city": "Santorini",
+      "duration_days": 7,
+      "duration_nights": 6,
+      "starting_price": 11200,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Caldera suite", "icon": "Heart", "display_order": 0 },
+        { "title": "Private catamaran", "icon": "Ship", "display_order": 1 },
+        { "title": "Couples spa ritual", "icon": "Sparkles", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Arrival & first caldera sunset", "description": "Private transfer, suite welcome, and a quiet table facing the caldera.", "hotel": "Caldera suite, Oia", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Catamaran & volcanic wine", "description": "Morning at leisure. Afternoon sail and a private tasting of Assyrtiko wines.", "hotel": "Caldera suite, Oia", "meal_plan": "Breakfast & dinner", "display_order": 1 },
+        { "day_number": 3, "title": "Spa & village hours", "description": "Couples treatment, then unhurried time in Fira or Imerovigli.", "hotel": "Caldera suite, Oia", "meal_plan": "Breakfast", "display_order": 2 },
+        { "day_number": 4, "title": "Your day", "description": "Held open — beach club, photography, or simply the terrace.", "hotel": "Caldera suite, Oia", "meal_plan": "Breakfast", "display_order": 3 },
+        { "day_number": 5, "title": "Private dinner", "description": "A chef’s menu on your terrace or a table we reserve just for you.", "hotel": "Caldera suite, Oia", "meal_plan": "Breakfast & dinner", "display_order": 4 },
+        { "day_number": 6, "title": "Last evening", "description": "Final sunset. Packing at leisure.", "hotel": "Caldera suite, Oia", "meal_plan": "Breakfast", "display_order": 5 },
+        { "day_number": 7, "title": "Departure", "description": "Transfer timed to your flight.", "hotel": "—", "meal_plan": "Breakfast", "display_order": 6 }
+      ],
+      "inclusions": [
+        { "title": "Six nights caldera suite", "display_order": 0 },
+        { "title": "Private catamaran afternoon", "display_order": 1 },
+        { "title": "One couples spa ritual", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Travel insurance", "display_order": 1 }
+      ],
+      "faqs": [
+        { "question": "Best season?", "answer": "May to October is ideal. We avoid the busiest weeks unless you prefer the energy of peak season.", "display_order": 0 }
+      ],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "adventure-safaris",
+      "title": "Masai Mara Private Migration",
+      "slug": "masai-mara-private-migration",
+      "short_description": "Five nights in an exclusive-use camp — dawn drives, bush dinners, and the migration in season.",
+      "description": "<p>An exclusive-use camp on the edge of the Mara. Your guide, your vehicle, your hours. We plan around the river crossings when timing allows — and around silence when it does not.</p>",
+      "country": "Kenya",
+      "city": "Masai Mara",
+      "duration_days": 6,
+      "duration_nights": 5,
+      "starting_price": 15800,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": false,
+      "featured_image_url": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1523804075765-869159263a2f?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Exclusive-use camp", "icon": "Tent", "display_order": 0 },
+        { "title": "Private guide & vehicle", "icon": "Compass", "display_order": 1 },
+        { "title": "Bush dinner under stars", "icon": "Moon", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Into the Mara", "description": "Charter or road transfer to camp. Sundowners before dinner.", "hotel": "Private bush camp", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Dawn drive", "description": "Early game drive, breakfast in the bush, afternoon at camp.", "hotel": "Private bush camp", "meal_plan": "Full board", "display_order": 1 },
+        { "day_number": 3, "title": "Full day on the plains", "description": "Picnic lunch. Return for a bush dinner.", "hotel": "Private bush camp", "meal_plan": "Full board", "display_order": 2 },
+        { "day_number": 4, "title": "Your pace", "description": "Second drive or a quiet day — we adjust on the morning.", "hotel": "Private bush camp", "meal_plan": "Full board", "display_order": 3 },
+        { "day_number": 5, "title": "Final evening", "description": "Last drive at golden hour.", "hotel": "Private bush camp", "meal_plan": "Full board", "display_order": 4 },
+        { "day_number": 6, "title": "Departure", "description": "Transfer to Wilson or JKIA for onward flight.", "hotel": "—", "meal_plan": "Breakfast", "display_order": 5 }
+      ],
+      "inclusions": [
+        { "title": "Five nights exclusive-use camp", "display_order": 0 },
+        { "title": "Daily private game drives", "display_order": 1 },
+        { "title": "All meals and house drinks at camp", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Park fees (quoted separately)", "display_order": 1 },
+        { "title": "Yellow fever vaccination if required", "display_order": 2 }
+      ],
+      "faqs": [
+        { "question": "Migration timing?", "answer": "River crossings are typically July to October. We are honest about what is likely for your dates.", "display_order": 0 }
+      ],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1523804075765-869159263a2f?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "signature-escapes",
+      "title": "Amalfi Coast Private Villa",
+      "slug": "amalfi-coast-private-villa",
+      "short_description": "Six nights in a clifftop villa — private boat days, Ravello evenings, and a chef who knows your name.",
+      "description": "<p>A villa above the Tyrrhenian Sea. Mornings on the terrace, afternoons by boat to hidden coves, and dinners that never need a reservation because the table is yours.</p>",
+      "country": "Italy",
+      "city": "Amalfi Coast",
+      "duration_days": 7,
+      "duration_nights": 6,
+      "starting_price": 14200,
+      "currency": "USD",
+      "is_featured": false,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1534113414509-0bd2d811a642?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Clifftop villa", "icon": "Home", "display_order": 0 },
+        { "title": "Private boat days", "icon": "Ship", "display_order": 1 },
+        { "title": "Villa chef", "icon": "UtensilsCrossed", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Arrival & terrace aperitivo", "description": "Naples or Rome transfer. Villa welcome and a light supper facing the sea.", "hotel": "Private clifftop villa", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Boat to Positano", "description": "Private day on the water with lunch ashore.", "hotel": "Private clifftop villa", "meal_plan": "Full board", "display_order": 1 },
+        { "day_number": 3, "title": "Ravello & your pace", "description": "Villa morning or gardens at Ravello — we adjust.", "hotel": "Private clifftop villa", "meal_plan": "Full board", "display_order": 2 }
+      ],
+      "inclusions": [
+        { "title": "Six nights private villa with staff", "display_order": 0 },
+        { "title": "Two private boat days", "display_order": 1 },
+        { "title": "Daily breakfast and selected dining", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Travel insurance", "display_order": 1 }
+      ],
+      "faqs": [
+        { "question": "Best season?", "answer": "May to June and September to October offer warm seas without August crowds.", "display_order": 0 }
+      ],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1534113414509-0bd2d811a642?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "signature-escapes",
+      "title": "Paris & Champagne Private Week",
+      "slug": "paris-champagne-private-week",
+      "short_description": "Four nights in a Left Bank residence, then two among the vines — galleries, tables, and quiet kilometres.",
+      "description": "<p>Paris first: after-hours access, a driver who knows the shortcuts, and rooms with a view. Then east into Champagne for a house opened just for you.</p>",
+      "country": "France",
+      "city": "Paris",
+      "duration_days": 7,
+      "duration_nights": 6,
+      "starting_price": 11800,
+      "currency": "USD",
+      "is_featured": false,
+      "is_popular": false,
+      "featured_image_url": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Left Bank residence", "icon": "Building2", "display_order": 0 },
+        { "title": "Private gallery access", "icon": "Landmark", "display_order": 1 },
+        { "title": "Champagne house visit", "icon": "Wine", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Arrival in Paris", "description": "Private transfer and a quiet first evening.", "hotel": "Left Bank residence", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "City at your pace", "description": "Gallery, shopping, or simply the arrondissement.", "hotel": "Left Bank residence", "meal_plan": "Breakfast", "display_order": 1 },
+        { "day_number": 3, "title": "Into Champagne", "description": "Transfer to a private house among the vines.", "hotel": "Champagne country house", "meal_plan": "Full board", "display_order": 2 }
+      ],
+      "inclusions": [
+        { "title": "Six nights as described", "display_order": 0 },
+        { "title": "Private driver in Paris", "display_order": 1 },
+        { "title": "One private tasting in Champagne", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Museum tickets unless arranged", "display_order": 1 }
+      ],
+      "faqs": [],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "honeymoon",
+      "title": "Maldives Honeymoon Lagoon",
+      "slug": "maldives-honeymoon-lagoon",
+      "short_description": "Seven nights over the water — breakfasts that float to you, a table for two at sunset, and nowhere to be.",
+      "description": "<p>A honeymoon should not feel scheduled. We protect the quiet hours, arrange the surprises you actually want, and leave the rest open.</p>",
+      "country": "Maldives",
+      "city": "South Malé Atoll",
+      "duration_days": 8,
+      "duration_nights": 7,
+      "starting_price": 13800,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Overwater suite", "icon": "Heart", "display_order": 0 },
+        { "title": "Private sandbank dinner", "icon": "Sun", "display_order": 1 },
+        { "title": "Couples spa", "icon": "Sparkles", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Seaplane arrival", "description": "Private transfer and a welcome on the deck.", "hotel": "Overwater suite", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Lagoon at leisure", "description": "Snorkel, spa, or simply the villa.", "hotel": "Overwater suite", "meal_plan": "Full board", "display_order": 1 },
+        { "day_number": 3, "title": "Sandbank evening", "description": "A table set on a deserted sandbank at dusk.", "hotel": "Overwater suite", "meal_plan": "Full board", "display_order": 2 }
+      ],
+      "inclusions": [
+        { "title": "Seven nights overwater suite", "display_order": 0 },
+        { "title": "Private sandbank dinner", "display_order": 1 },
+        { "title": "One couples spa ritual", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Premium wines", "display_order": 1 }
+      ],
+      "faqs": [],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "honeymoon",
+      "title": "Amalfi Coast for Two",
+      "slug": "amalfi-coast-honeymoon",
+      "short_description": "Five nights above the coast — boat days, limoncello at sunset, and a villa that feels like it is only yours.",
+      "description": "<p>The Amalfi Coast without the coach crowds. A villa, a skipper, and evenings where the only plan is the view.</p>",
+      "country": "Italy",
+      "city": "Positano",
+      "duration_days": 6,
+      "duration_nights": 5,
+      "starting_price": 10500,
+      "currency": "USD",
+      "is_featured": false,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1534113414509-0bd2d811a642?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Cliffside villa", "icon": "Heart", "display_order": 0 },
+        { "title": "Sunset boat", "icon": "Ship", "display_order": 1 },
+        { "title": "Private chef evening", "icon": "UtensilsCrossed", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Arrival & Positano", "description": "Transfer and a terrace supper.", "hotel": "Private villa, Positano", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Coastal boat day", "description": "Swim stops and lunch on board.", "hotel": "Private villa, Positano", "meal_plan": "Full board", "display_order": 1 }
+      ],
+      "inclusions": [
+        { "title": "Five nights private villa", "display_order": 0 },
+        { "title": "One private boat day", "display_order": 1 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 }
+      ],
+      "faqs": [],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "wellness-retreats",
+      "title": "Tuscany Wellness Estate",
+      "slug": "tuscany-wellness-estate",
+      "short_description": "Five nights in a stone estate — vineyard walks, spa hours, and food from the garden.",
+      "description": "<p>A working estate in southern Tuscany. Slow mornings, an on-site therapist, and dinners that begin in the vegetable garden.</p>",
+      "country": "Italy",
+      "city": "Tuscany",
+      "duration_days": 6,
+      "duration_nights": 5,
+      "starting_price": 8400,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Private estate", "icon": "Home", "display_order": 0 },
+        { "title": "Daily spa rituals", "icon": "Sparkles", "display_order": 1 },
+        { "title": "Farm-to-table dining", "icon": "UtensilsCrossed", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Arrival & estate tour", "description": "Settle in and a light supper from the garden.", "hotel": "Private estate suite", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Spa & vineyard walk", "description": "Morning treatment and an unhurried afternoon.", "hotel": "Private estate suite", "meal_plan": "Full board", "display_order": 1 }
+      ],
+      "inclusions": [
+        { "title": "Five nights estate suite", "display_order": 0 },
+        { "title": "Daily spa treatment", "display_order": 1 },
+        { "title": "All meals", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 }
+      ],
+      "faqs": [],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "wellness-retreats",
+      "title": "Kerala Ayurveda Retreat",
+      "slug": "kerala-ayurveda-retreat",
+      "short_description": "Ten nights on the backwaters — daily Ayurveda, yoga at dawn, and a houseboat that moves when you do.",
+      "description": "<p>Kerala at its most restorative. A physician who reads your pulse, treatments timed to the day, and silence between the palms.</p>",
+      "country": "India",
+      "city": "Kerala",
+      "duration_days": 11,
+      "duration_nights": 10,
+      "starting_price": 6800,
+      "currency": "USD",
+      "is_featured": false,
+      "is_popular": false,
+      "featured_image_url": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1596178065880-23140299c6c9?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Daily Ayurveda", "icon": "Heart", "display_order": 0 },
+        { "title": "Private houseboat", "icon": "Ship", "display_order": 1 },
+        { "title": "Yoga at dawn", "icon": "Sunrise", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Consultation & arrival", "description": "Physician consultation and gentle first treatment.", "hotel": "Ayurveda retreat", "meal_plan": "Full board", "display_order": 0 },
+        { "day_number": 2, "title": "Treatment rhythm begins", "description": "Yoga, Ayurveda, and sattvic meals.", "hotel": "Ayurveda retreat", "meal_plan": "Full board", "display_order": 1 }
+      ],
+      "inclusions": [
+        { "title": "Ten nights full programme", "display_order": 0 },
+        { "title": "Daily treatments as prescribed", "display_order": 1 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Visa fees", "display_order": 1 }
+      ],
+      "faqs": [],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "adventure-safaris",
+      "title": "Rwanda Gorilla Sanctuary",
+      "slug": "rwanda-gorilla-sanctuary",
+      "short_description": "Four nights in the Virunga foothills — gorilla trekking, forest silence, and a lodge with only a handful of rooms.",
+      "description": "<p>One of the rarest encounters in travel, handled with the care it deserves. Permits secured, guides chosen, pace unhurried.</p>",
+      "country": "Rwanda",
+      "city": "Volcanoes National Park",
+      "duration_days": 5,
+      "duration_nights": 4,
+      "starting_price": 13200,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1551632811-561732d08954?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Gorilla trekking", "icon": "Mountain", "display_order": 0 },
+        { "title": "Forest lodge", "icon": "Tent", "display_order": 1 },
+        { "title": "Private guide", "icon": "Compass", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Kigali to the forest", "description": "Scenic transfer and lodge arrival.", "hotel": "Forest lodge", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Gorilla trek", "description": "Early start with trackers. Afternoon at rest.", "hotel": "Forest lodge", "meal_plan": "Full board", "display_order": 1 }
+      ],
+      "inclusions": [
+        { "title": "Four nights lodge", "display_order": 0 },
+        { "title": "One gorilla permit", "display_order": 1 },
+        { "title": "Private transfers", "display_order": 2 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Additional treks", "display_order": 1 }
+      ],
+      "faqs": [],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1551632811-561732d08954?auto=format&fit=crop&w=1400&q=80"
+      ]
+    },
+    {
+      "category_slug": "adventure-safaris",
+      "title": "Iceland Private Expedition",
+      "slug": "iceland-private-expedition",
+      "short_description": "Six nights under the aurora — super jeep days, private guides, and hot springs when the day is done.",
+      "description": "<p>Iceland without the coach stops. A super jeep, a guide who knows when to wait for the light, and lodges chosen for warmth and quiet.</p>",
+      "country": "Iceland",
+      "city": "South Coast",
+      "duration_days": 7,
+      "duration_nights": 6,
+      "starting_price": 11900,
+      "currency": "USD",
+      "is_featured": false,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1600&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1531168556467-80aacefbe302?auto=format&fit=crop&w=1800&q=80",
+      "highlights": [
+        { "title": "Super jeep access", "icon": "Car", "display_order": 0 },
+        { "title": "Aurora hunting", "icon": "Moon", "display_order": 1 },
+        { "title": "Private hot springs", "icon": "Sparkles", "display_order": 2 }
+      ],
+      "itinerary": [
+        { "day_number": 1, "title": "Reykjavik & south", "description": "Private transfer south to first lodge.", "hotel": "Boutique lodge", "meal_plan": "Dinner", "display_order": 0 },
+        { "day_number": 2, "title": "Glacier & black sand", "description": "Super jeep day with a private guide.", "hotel": "Boutique lodge", "meal_plan": "Full board", "display_order": 1 }
+      ],
+      "inclusions": [
+        { "title": "Six nights as described", "display_order": 0 },
+        { "title": "Private super jeep and guide", "display_order": 1 }
+      ],
+      "exclusions": [
+        { "title": "International flights", "display_order": 0 },
+        { "title": "Helicopter options", "display_order": 1 }
+      ],
+      "faqs": [],
+      "gallery_image_urls": [
+        "https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1400&q=80"
+      ]
+    }
+  ],
+  "about": {
+    "hero_title": "Our Story",
+    "hero_subtitle": "Fifteen years of journeys that refuse to be ordinary.",
+    "hero_image_url": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1800&q=80",
+    "company_description": "Today we are a small studio of curators — each with a region they know deeply. We do not sell packages off a shelf. We design the days, the rooms, and the silences in between.",
+    "our_story": "Pure Luxe Holidays began in 2009 with a simple idea: the finest travel is not a destination list, it is how a journey is made. We started with a handful of villas and a notebook of people we trusted. That notebook is now a network — still personal, still quiet.",
+    "mission": "To craft unforgettable luxury journeys through personalised service, considered places, and hospitality that does not perform — it simply holds.",
+    "vision": "To be the studio guests return to when the world feels too loud, and a journey must feel like it was written for them alone.",
+    "seo_title": "About Pure Luxe Holidays",
+    "seo_description": "The story, people, and values behind Pure Luxe Holidays — bespoke luxury travel since 2009.",
+    "is_active": true
+  },
+  "core_values": [
+    { "title": "Personalisation", "description": "No two itineraries are alike. We start from a blank page every time.", "icon": "Compass", "display_order": 0 },
+    { "title": "Excellence", "description": "We would rather say no than send you somewhere we would not stay ourselves.", "icon": "Gem", "display_order": 1 },
+    { "title": "Genuine Care", "description": "You have one specialist. They stay with the journey until you are home.", "icon": "Heart", "display_order": 2 },
+    { "title": "Quiet Elegance", "description": "We prefer rooms that do not need to announce themselves.", "icon": "Sparkles", "display_order": 3 }
+  ],
+  "leadership": [
+    {
+      "name": "Amira Al-Hassan",
+      "designation": "Founder & Creative Director",
+      "bio": "Amira built Pure Luxe from a conviction that luxury is attention, not volume. She still reads every first itinerary.",
+      "profile_image_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
+      "email": "amira@pureluxeholidays.com",
+      "display_order": 0
+    },
+    {
+      "name": "James Whitmore",
+      "designation": "Head of Journeys",
+      "bio": "James spent a decade on the ground in East Africa and the Alps. He matches guests to the right private camps and chalets.",
+      "profile_image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+      "email": "james@pureluxeholidays.com",
+      "display_order": 1
+    },
+    {
+      "name": "Maya Chen",
+      "designation": "Director of Concierge",
+      "bio": "Maya runs the 24-hour desk — visas, last-minute tables, and the message that arrives before you knew you needed it.",
+      "profile_image_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=800&q=80",
+      "email": "maya@pureluxeholidays.com",
+      "display_order": 2
+    }
+  ],
+  "timeline": [
+    { "year": "2009", "title": "The Beginning", "description": "Founded in Dubai with a short list of villas and a long list of standards.", "display_order": 0 },
+    { "year": "2014", "title": "A Wider Map", "description": "The Indian Ocean, the Alps, and East Africa joined the studio’s regular work.", "display_order": 1 },
+    { "year": "2019", "title": "Recognition", "description": "Named among leading independent luxury travel ateliers by peer awards.", "display_order": 2 },
+    { "year": "2024", "title": "Beyond Luxury", "description": "One hundred and twenty destinations, still one specialist per journey.", "display_order": 3 }
+  ],
+  "awards": [
+    { "title": "Outstanding Independent Atelier", "organization": "World Travel Awards", "award_date": "2019", "description": "Recognising consistent, guest-led luxury design.", "display_order": 0 },
+    { "title": "Indian Ocean Specialist", "organization": "Condé Nast Traveler Readers’ Choice", "award_date": "2022", "description": "For villa and island programmes in the Maldives and beyond.", "display_order": 1 }
+  ],
+  "partners": [
+    { "name": "Four Seasons", "website": "https://www.fourseasons.com", "description": "Preferred rooms and villa inventory worldwide.", "display_order": 0 },
+    { "name": "Belmond", "website": "https://www.belmond.com", "description": "Trains, river journeys, and houses we know well.", "display_order": 1 },
+    { "name": "&Beyond", "website": "https://www.andbeyond.com", "description": "Private camps across southern and East Africa.", "display_order": 2 }
+  ],
+  "company_statistics": [
+    { "title": "Years", "value": "15", "suffix": "+", "icon": "Clock", "display_order": 0 },
+    { "title": "Destinations", "value": "120", "suffix": "+", "icon": "Globe", "display_order": 1 },
+    { "title": "Specialists", "value": "18", "suffix": "", "icon": "Users", "display_order": 2 }
+  ],
+  "faqs": [
+    { "question": "How far in advance should I begin planning?", "answer": "For peak season and exclusive-use properties, 6–12 months. We can still work with shorter notice — we will be honest about what is possible.", "display_order": 0 },
+    { "question": "Are journeys fully private?", "answer": "Yes. We do not operate group tours. Transfers, guides, and dining can be arranged privately throughout.", "display_order": 1 },
+    { "question": "Can you change an existing package?", "answer": "Always. Packages are starting points. Duration, hotels, and pacing are rewritten with you.", "display_order": 2 },
+    { "question": "Do you book flights and visas?", "answer": "We coordinate flights when asked and advise on visas. Applications remain your responsibility unless we agree otherwise in writing.", "display_order": 3 },
+    { "question": "How do I start?", "answer": "Use Plan My Journey or Contact. A specialist replies within 24 hours.", "display_order": 4 }
+  ],
+  "blog_categories": [
+    { "name": "Islands", "slug": "islands", "description": "Atolls, lagoons, and private shores.", "display_order": 0 },
+    { "name": "Mountains", "slug": "mountains", "description": "Alps, light, and high silence.", "display_order": 1 },
+    { "name": "Cities", "slug": "cities", "description": "Skylines, tables, and after hours.", "display_order": 2 },
+    { "name": "How We Travel", "slug": "how-we-travel", "description": "Notes from the studio.", "display_order": 3 },
+    { "name": "Wellness", "slug": "wellness", "description": "Rituals, retreats, and the art of slowing down.", "display_order": 4 },
+    { "name": "Culinary", "slug": "culinary", "description": "Flavours, farms, and private dining.", "display_order": 5 }
+  ],
+  "blog_tags": [
+    { "name": "Maldives", "slug": "maldives" },
+    { "name": "Switzerland", "slug": "switzerland" },
+    { "name": "Concierge", "slug": "concierge" },
+    { "name": "Villas", "slug": "villas" },
+    { "name": "Bali", "slug": "bali" },
+    { "name": "Dubai", "slug": "dubai" },
+    { "name": "Santorini", "slug": "santorini" },
+    { "name": "Safari", "slug": "safari" },
+    { "name": "Wellness", "slug": "wellness" },
+    { "name": "Food & Wine", "slug": "food-wine" },
+    { "name": "Family", "slug": "family" },
+    { "name": "Honeymoon", "slug": "honeymoon" },
+    { "name": "Photography", "slug": "photography" }
+  ],
+  "articles": [
+    {
+      "category_slug": "islands",
+      "title": "A Morning That Belongs Only to the Lagoon",
+      "slug": "morning-that-belongs-to-the-lagoon",
+      "excerpt": "Why we still send guests to Baa Atoll — and why the first hour after sunrise is the one we protect most carefully.",
+      "content": "<p>There is a particular quiet that only exists over a lagoon before the seaplanes begin. The water is a colour that photographs never quite catch — a translucent jade that shifts with the clouds. We ask chefs not to knock until you have had that hour.</p><p>Baa Atoll remains a place we return to because the house reefs still feel alive, and because a handful of residences still treat privacy as a design principle, not a marketing line. The coral is regenerating. The mantas still arrive on schedule.</p><h2>When to Go</h2><p>If you go, go in shoulder season if you can. The light is softer. The boat is yours. The resort operates at perhaps sixty percent, which means the beach butler remembers your name and your drink without notes.</p><h2>What We Arrange</h2><p>A private sandbank dinner on night two. The marine biologist for an afternoon — not as a lecture, but as a companion on the reef. A sunrise yoga deck that faces east with nothing between you and Sri Lanka but water.</p><p>The Maldives is not one place. It is a thousand tiny islands, and the difference between the right one and the wrong one is the difference between a holiday and something you carry with you.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "Amira Al-Hassan",
+      "reading_time": 6,
+      "published_at": "2026-07-12T09:00:00Z",
+      "status": "published",
+      "is_featured": true,
+      "homepage_featured": true,
+      "tag_slugs": ["maldives", "villas"]
+    },
+    {
+      "category_slug": "mountains",
+      "title": "First Tracks, Then Firelight",
+      "slug": "first-tracks-then-firelight",
+      "excerpt": "How we pace a Zermatt week so the mountain does not swallow the evening.",
+      "content": "<p>The mistake is to ski until the lifts close every day. By night four, nobody wants the Matterhorn in the window — they want a bath.</p><h2>The Art of Pacing</h2><p>We hold day three or four as a spa or village day. The heli, if you want it, sits on the one morning when the snow report and your legs agree. Not before.</p><p>A chalet with a proper kitchen changes everything. Dinner does not need a reservation. The fire does the rest. Our favourite properties have a chef who arrives at five and leaves before dessert — because the conversation is yours, not theirs.</p><h2>Beyond the Slopes</h2><p>The Gornergrat railway at golden hour is worth losing an afternoon of skiing for. The light paints the Matterhorn in shades of amber that make professional photographers put their cameras down and simply watch.</p><p>We also keep a fondue evening in reserve — a mountain hut reachable only by torch-lit path. It sounds theatrical. It is. And it works every single time.</p><p>Zermatt is not about how many runs you do. It is about how the week feels when you look back from the train to Zurich.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "James Whitmore",
+      "reading_time": 7,
+      "published_at": "2026-06-20T09:00:00Z",
+      "status": "published",
+      "is_featured": true,
+      "homepage_featured": true,
+      "tag_slugs": ["switzerland"]
+    },
+    {
+      "category_slug": "cities",
+      "title": "Dubai After the Heat Breaks",
+      "slug": "dubai-after-the-heat-breaks",
+      "excerpt": "A skyline suite is only half the story. The other half is when the desert goes quiet.",
+      "content": "<p>We like guests to take the city first — yacht, gallery, a table that is difficult on a Saturday. Then we leave.</p><h2>City First</h2><p>The new arts district has changed what Dubai feels like. A morning at the Louvre Abu Dhabi followed by lunch at a courtyard restaurant where the chef trained in Tokyo — that is not the Dubai most people imagine, and it is the one that stays with you.</p><h2>Then the Desert</h2><p>The camp we use is exclusive-use. There is no entertainment programme. There is a table, a sky, and staff who know when to disappear. The dunes shift enough overnight that the landscape you wake to is not the one you fell asleep in.</p><p>November to March is when this sequence sings. In high summer we shorten the dunes and keep the pool closer. But the rhythm holds: spectacle first, silence second.</p><p>Dubai rewards those who stay long enough to get past the lobby. We usually suggest five nights minimum — three in the city, two in the sand.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "Maya Chen",
+      "reading_time": 6,
+      "published_at": "2026-05-04T09:00:00Z",
+      "status": "published",
+      "is_featured": false,
+      "homepage_featured": true,
+      "tag_slugs": ["dubai", "concierge"]
+    },
+    {
+      "category_slug": "how-we-travel",
+      "title": "Why We Still Start With a Conversation",
+      "slug": "why-we-still-start-with-a-conversation",
+      "excerpt": "Forms are useful. They are not how a journey should begin.",
+      "content": "<p>Plan My Journey gives us dates and a destination. The telephone call tells us whether you want to be busy or left alone — and those are different itineraries entirely.</p><h2>The First Question</h2><p>We never ask 'What is your budget?' first. We ask 'What did you love about your last trip? What would you change?' The answers tell us more than any number.</p><p>We would rather take an extra week before sending a proposal than send the wrong villa. That is not delay. That is the work.</p><h2>How a Proposal Is Built</h2><p>Every itinerary goes through three people: the concierge who spoke with you, a destination specialist who has been there within the last six months, and our creative director who looks at pacing and flow. Does the week breathe? Is there a surprise on day four? Does the last morning feel like an ending or a beginning?</p><p>We have turned down bookings when we knew we could not deliver what someone imagined. We would rather say no honestly than say yes carelessly.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "Amira Al-Hassan",
+      "reading_time": 5,
+      "published_at": "2026-04-18T09:00:00Z",
+      "status": "published",
+      "is_featured": false,
+      "homepage_featured": false,
+      "tag_slugs": ["concierge"]
+    },
+    {
+      "category_slug": "islands",
+      "title": "Ubud When the Terrace Is Enough",
+      "slug": "ubud-when-the-terrace-is-enough",
+      "excerpt": "Not every Bali week needs a temple circuit. Some need a pool and a cook who understands quiet.",
+      "content": "<p>We still love a dawn blessing. We no longer assume every guest wants one every morning.</p><h2>The Case for Staying Put</h2><p>The villas we keep on file have staff who can disappear. The driver knows the long way around the traffic. The rest is yours.</p><p>Ubud has changed — more cafes, more visitors, more noise on Monkey Forest Road. But walk ten minutes in any direction and you are back in the rice terraces with nothing but the sound of water moving through irrigation channels that are older than most European cities.</p><h2>Our Favourite Day</h2><p>Wake late. Have the cook make nasi goreng with whatever came from the market. Swim. Read. At four, a driver takes you to Tegallalang — not for the tourist walk, but for the cafe at the top where the view opens up and nobody bothers you. Dinner is wherever you feel like, or on the terrace if you do not.</p><p>Bali does not need to be an itinerary. It can be a place where you remember how to do nothing beautifully.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "Maya Chen",
+      "reading_time": 5,
+      "published_at": "2026-08-02T09:00:00Z",
+      "status": "published",
+      "is_featured": false,
+      "homepage_featured": false,
+      "tag_slugs": ["bali", "villas"]
+    },
+    {
+      "category_slug": "islands",
+      "title": "Santorini Beyond the Caldera",
+      "slug": "santorini-beyond-the-caldera",
+      "excerpt": "Everyone photographs the sunset from Oia. We prefer the sunrise from the other side of the island.",
+      "content": "<p>Santorini has earned its reputation and paid for it with crowds. The caldera view is magnificent and exhausting in equal measure during July and August. But the island has another face.</p><h2>The Eastern Shore</h2><p>Kamari and Perissa have black volcanic beaches that are dramatic and half-empty. The tavernas here serve food that tastes of the island — capers from Fira, tomatoes that are sweet because they grow in volcanic soil with almost no water, fava that has been a staple since before anyone thought to put a hotel on the cliff.</p><h2>A Wine Island</h2><p>Santorini's wines are extraordinary and almost unknown outside Greece. Assyrtiko grown in basket-trained vines on volcanic pumice has a minerality that sommeliers describe as tasting like the rock itself. A private tasting at one of the older estates — Santo Wines, Venetsanos — with the caldera behind you and a plate of white aubergine beside you: that is a Santorini afternoon worth protecting.</p><h2>When We Send Guests</h2><p>Late September. The light is golden, the water is still warm, and the cruise ships have thinned. A villa with a private pool above Imerovigli, a driver for the day, and nothing planned except dinner.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "James Whitmore",
+      "reading_time": 7,
+      "published_at": "2026-08-10T09:00:00Z",
+      "status": "published",
+      "is_featured": true,
+      "homepage_featured": false,
+      "tag_slugs": ["santorini", "food-wine"]
+    },
+    {
+      "category_slug": "wellness",
+      "title": "The Quiet Architecture of a Spa Week",
+      "slug": "quiet-architecture-of-a-spa-week",
+      "excerpt": "A wellness retreat should not feel like a medical appointment. Here is how we design them.",
+      "content": "<p>The best spa weeks do not start with a schedule. They start with a conversation about sleep — how much you are getting, whether you wake in the night, what the last three months have felt like.</p><h2>Day One Is Nothing</h2><p>We never book a treatment on arrival day. You arrive, you swim, you eat something simple, you sleep. The body needs a day to stop performing before it can start receiving.</p><h2>The Middle Days</h2><p>Treatments are spaced, not stacked. A morning Watsu session. Four hours of nothing. An afternoon walk. A sound bath before dinner. The temptation is always to fill the diary. We resist it on your behalf.</p><h2>Where We Send People</h2><p>Bali for depth — there is a Balinese healing tradition that Western spas have borrowed from but rarely match. Switzerland for precision — the medical spas around Lake Geneva combine diagnostics with five-star hospitality in a way nobody else does. The Maldives for simplicity — an overwater treatment room with glass floors, watching reef fish while someone works on your shoulders.</p><p>Wellness is not a destination. It is a pace. We help you find it.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1540555700478-4be289fbec6d?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "Amira Al-Hassan",
+      "reading_time": 6,
+      "published_at": "2026-07-28T09:00:00Z",
+      "status": "published",
+      "is_featured": true,
+      "homepage_featured": false,
+      "tag_slugs": ["wellness", "bali", "switzerland", "maldives"]
+    },
+    {
+      "category_slug": "culinary",
+      "title": "A Table in the Vineyards",
+      "slug": "a-table-in-the-vineyards",
+      "excerpt": "The best meals we have arranged were not in restaurants. They were in fields, on rooftops, and beside rivers.",
+      "content": "<p>A Michelin star is a useful shorthand. But the meals our guests remember most vividly are the ones we set up somewhere unexpected.</p><h2>The Vineyard Lunch</h2><p>In Tuscany, we work with a family estate where the winemaker cooks. Not a chef — the winemaker. She pairs each course with the wine it was literally grown beside. The table sits under an olive tree that is older than the Renaissance paintings in the nearby church.</p><h2>The Rooftop in Marrakech</h2><p>A riad in the medina. A cook who learned tagine from her grandmother. The Atlas Mountains catching the last light. No menu — you eat what the souk provided that morning. This is not a restaurant experience. It is a home experience, and the difference is everything.</p><h2>Why It Matters</h2><p>Food is memory. The seasoning of a place — its soil, its seasons, its hands — cannot be replicated in a hotel kitchen, however talented the brigade. We seek out the people who cook because they love it, in places where the ingredients walked to the kitchen.</p><p>We do not arrange dining experiences. We arrange meals. The distinction is important.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "Maya Chen",
+      "reading_time": 6,
+      "published_at": "2026-06-15T09:00:00Z",
+      "status": "published",
+      "is_featured": false,
+      "homepage_featured": false,
+      "tag_slugs": ["food-wine"]
+    },
+    {
+      "category_slug": "how-we-travel",
+      "title": "Travelling With Children (Without Losing Yourself)",
+      "slug": "travelling-with-children-without-losing-yourself",
+      "excerpt": "Family travel does not mean compromise. It means designing two journeys that share the same villa.",
+      "content": "<p>The conversation we have most often with parents is this: 'We want the children to have an adventure, but we also want to read a book by the pool without guilt.' Both are possible. They just require planning.</p><h2>The Dual-Track Itinerary</h2><p>We design mornings together and afternoons apart. A family snorkel at ten. Lunch together. Then the kids go to the marine discovery programme while the parents go to the spa, or a wine tasting, or simply nowhere at all.</p><h2>The Right Property</h2><p>Not every luxury resort is good with children. We know which ones are — the ones where the kids' club is run by people who genuinely love what they do, where the room configuration means parents have a separate space after bedtime, where the pool has a shallow end that does not require constant vigilance.</p><h2>Our Rule</h2><p>If we would not send our own children there, we do not send yours. That eliminates more places than you might expect, and the ones that remain are extraordinary.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "James Whitmore",
+      "reading_time": 5,
+      "published_at": "2026-03-22T09:00:00Z",
+      "status": "published",
+      "is_featured": false,
+      "homepage_featured": false,
+      "tag_slugs": ["family", "concierge"]
+    },
+    {
+      "category_slug": "how-we-travel",
+      "title": "The Honeymoon We Wish Everyone Had",
+      "slug": "the-honeymoon-we-wish-everyone-had",
+      "excerpt": "After months of planning for everyone else, you deserve a trip that is entirely about you.",
+      "content": "<p>Honeymoons suffer from expectation. You have just hosted the largest event of your life, you are exhausted, and now you are supposed to have the most romantic week of your life on a schedule.</p><h2>Our Approach</h2><p>We build in recovery. The first two days have almost nothing planned — a late checkout from reality. By day three, you are ready to explore, and that is when we introduce the experiences: a private sunset sail, a couples' spa ritual, a dinner on a sandbank where the only light comes from candles and stars.</p><h2>Two-Destination Honeymoons</h2><p>Our most popular format is five nights and five nights. Maldives then Bali. Dubai then the Seychelles. Santorini then the Amalfi Coast. The first half is stillness. The second half is discovery. You come home feeling like you have had two holidays, which, after a wedding, is exactly the right number.</p><h2>The Details That Matter</h2><p>We arrange the small things that make a honeymoon feel like one — the bottle already chilled when you arrive, the bath drawn with frangipani, the handwritten note from the general manager who knows why you are there. None of these cost extra. All of them require someone who cares.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "Amira Al-Hassan",
+      "reading_time": 7,
+      "published_at": "2026-02-14T09:00:00Z",
+      "status": "published",
+      "is_featured": true,
+      "homepage_featured": true,
+      "tag_slugs": ["honeymoon", "maldives", "bali", "santorini"]
+    },
+    {
+      "category_slug": "mountains",
+      "title": "The Light in Cappadocia",
+      "slug": "the-light-in-cappadocia",
+      "excerpt": "Hundreds of balloons rise at dawn. But the real Cappadocia begins after they land.",
+      "content": "<p>Every travel photograph of Cappadocia shows the same image: a sky full of hot air balloons above fairy chimneys at sunrise. It is beautiful. It is also over by 8 AM.</p><h2>What Comes After</h2><p>The valleys are where the magic lives. Ihlara Valley is a gorge carved by a river that still runs, with Byzantine churches cut into the rock face, their frescoes faded but present. You walk for hours without seeing another person. The guide we use was born here and knows which caves have the best acoustics — she will sing for you if you ask.</p><h2>Cave Hotels Done Right</h2><p>Not all cave hotels are equal. Some are carved rock with underfloor heating, handwoven textiles, and a terrace that faces the balloon launch site. Others are concrete painted to look like rock. We know the difference because we have slept in both.</p><h2>The Pottery Workshop</h2><p>Avanos has been making pottery since the Hittites. We arrange an afternoon with a master ceramicist — not a tourist demonstration, but a real session where you leave with something you made, still warm. It is the kind of experience that becomes a story you tell at dinner for years.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1526048598645-62b31f82b8f5?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "Maya Chen",
+      "reading_time": 7,
+      "published_at": "2026-08-05T09:00:00Z",
+      "status": "published",
+      "is_featured": false,
+      "homepage_featured": false,
+      "tag_slugs": ["photography"]
+    },
+    {
+      "category_slug": "how-we-travel",
+      "title": "What We Pack (And What We Leave Behind)",
+      "slug": "what-we-pack-and-what-we-leave-behind",
+      "excerpt": "After a thousand trips, here is what actually matters in a suitcase.",
+      "content": "<p>We send guests a packing list before every trip. Not because they cannot pack, but because we know details about their destination that affect what they will need — the dress code at a particular restaurant, whether the walking trails are paved or not, whether evenings are cooler than they expect.</p><h2>The Essentials</h2><p>A good pair of walking shoes that do not look like walking shoes. A linen layer for air-conditioned restaurants. A swimsuit that dries quickly. Sunscreen that does not smell like a chemical plant. A physical book — not a Kindle, a book, because the feel of pages is part of being on holiday.</p><h2>What to Leave</h2><p>The laptop, unless you genuinely cannot. The second pair of heels. The 'just in case' outfit that has never left a suitcase in ten years of travelling. The anxiety about being unreachable — most things that feel urgent on Monday feel irrelevant by Thursday.</p><h2>Our Secret</h2><p>We always suggest packing a small, empty bag inside your suitcase. It folds flat. On the return trip, it carries everything you bought, and your main bag stays organised. This is the kind of advice that seems trivial until you use it, and then you wonder why nobody told you sooner.</p>",
+      "featured_image_url": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&w=1400&q=80",
+      "banner_image_url": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1800&q=80",
+      "author_name": "James Whitmore",
+      "reading_time": 5,
+      "published_at": "2026-01-10T09:00:00Z",
+      "status": "published",
+      "is_featured": false,
+      "homepage_featured": false,
+      "tag_slugs": ["concierge"]
+    }
+  ],
+  "gallery_categories": [
+    { "name": "Maldives", "slug": "maldives", "icon": "Waves", "display_order": 0 },
+    { "name": "Switzerland", "slug": "switzerland", "icon": "Mountain", "display_order": 1 },
+    { "name": "Bali", "slug": "bali", "icon": "Palmtree", "display_order": 2 },
+    { "name": "Dubai", "slug": "dubai", "icon": "Building2", "display_order": 3 },
+    { "name": "Santorini", "slug": "santorini", "icon": "Sun", "display_order": 4 },
+    { "name": "Masai Mara", "slug": "masai-mara", "icon": "Binoculars", "display_order": 5 }
+  ],
+  "gallery_albums": [
+    {
+      "category_slug": "maldives",
+      "title": "Maldives Light",
+      "slug": "maldives-light",
+      "description": "Lagoon hours from residences we still send guests to.",
+      "country": "Maldives",
+      "city": "Baa Atoll",
+      "cover_image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
+      "featured": true,
+      "homepage_featured": true,
+      "display_order": 0,
+      "items": [
+        { "title": "Overwater morning", "image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80", "display_order": 0, "is_featured": true },
+        { "title": "Sandbank", "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80", "display_order": 1 },
+        { "title": "Still water", "image_url": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1400&q=80", "display_order": 2 },
+        { "title": "Lagoon aerial", "image_url": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1400&q=80", "display_order": 3 }
+      ]
+    },
+    {
+      "category_slug": "switzerland",
+      "title": "Alpine Winter",
+      "slug": "alpine-winter",
+      "description": "Zermatt and the high snow.",
+      "country": "Switzerland",
+      "city": "Zermatt",
+      "cover_image_url": "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=1400&q=80",
+      "featured": true,
+      "homepage_featured": false,
+      "display_order": 1,
+      "items": [
+        { "title": "Village light", "image_url": "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=1400&q=80", "display_order": 0, "is_featured": true },
+        { "title": "High snow", "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80", "display_order": 1 },
+        { "title": "Matterhorn dawn", "image_url": "https://images.unsplash.com/photo-1530122037265-a5f1f4d24b19?auto=format&fit=crop&w=1400&q=80", "display_order": 2 }
+      ]
+    },
+    {
+      "category_slug": "bali",
+      "title": "Ubud Canopy",
+      "slug": "bali-ubud-canopy",
+      "description": "Rice terraces, pool villas, and temple light at first hour.",
+      "country": "Indonesia",
+      "city": "Ubud",
+      "cover_image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=80",
+      "featured": true,
+      "homepage_featured": true,
+      "display_order": 2,
+      "items": [
+        { "title": "Jungle pool", "image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=80", "display_order": 0, "is_featured": true },
+        { "title": "Rice terraces", "image_url": "https://images.unsplash.com/photo-1518548419970-58e3b4076839?auto=format&fit=crop&w=1400&q=80", "display_order": 1 },
+        { "title": "Temple steps", "image_url": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=1400&q=80", "display_order": 2 }
+      ]
+    },
+    {
+      "category_slug": "dubai",
+      "title": "Dubai Hours",
+      "slug": "dubai-hours",
+      "description": "Skyline and dunes.",
+      "country": "UAE",
+      "city": "Dubai",
+      "cover_image_url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=80",
+      "featured": false,
+      "homepage_featured": true,
+      "display_order": 3,
+      "items": [
+        { "title": "Downtown dusk", "image_url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=80", "display_order": 0 },
+        { "title": "Desert edge", "image_url": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&w=1400&q=80", "display_order": 1 },
+        { "title": "Marina night", "image_url": "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1400&q=80", "display_order": 2 }
+      ]
+    },
+    {
+      "category_slug": "santorini",
+      "title": "Caldera Light",
+      "slug": "santorini-caldera",
+      "description": "White villages, volcanic wine, and sunsets over the Aegean.",
+      "country": "Greece",
+      "city": "Oia",
+      "cover_image_url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=80",
+      "featured": true,
+      "homepage_featured": false,
+      "display_order": 4,
+      "items": [
+        { "title": "Caldera view", "image_url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=80", "display_order": 0, "is_featured": true },
+        { "title": "Blue domes", "image_url": "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=1400&q=80", "display_order": 1 },
+        { "title": "Sunset terrace", "image_url": "https://images.unsplash.com/photo-1533104816321-9f9f1e5c8f1e?auto=format&fit=crop&w=1400&q=80", "display_order": 2 }
+      ]
+    },
+    {
+      "category_slug": "masai-mara",
+      "title": "Mara Dawn",
+      "slug": "masai-mara-dawn",
+      "description": "Golden grass, big cats, and camps that feel entirely yours.",
+      "country": "Kenya",
+      "city": "Masai Mara",
+      "cover_image_url": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=80",
+      "featured": false,
+      "homepage_featured": false,
+      "display_order": 5,
+      "items": [
+        { "title": "Savannah light", "image_url": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=80", "display_order": 0, "is_featured": true },
+        { "title": "Migration horizon", "image_url": "https://images.unsplash.com/photo-1549366021-9f761d0400a2?auto=format&fit=crop&w=1400&q=80", "display_order": 1 },
+        { "title": "Camp fire", "image_url": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1400&q=80", "display_order": 2 }
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "customer_name": "Elena Voss",
+      "customer_location": "Zurich",
+      "customer_designation": "Art Advisor",
+      "rating": 5,
+      "title": "They protected the quiet",
+      "review": "We asked for a Maldives week that did not feel like a resort brochure. The residence was exact. The boat left when we were ready, not when a schedule said so. I have never been looked after so lightly.",
+      "profile_image_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+      "background_image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
+      "destination_slug": "maldives",
+      "package_slug": "maldives-overwater-sanctuary",
+      "travel_date": "2025-02-14T00:00:00Z",
+      "is_featured": true,
+      "homepage_featured": true,
+      "display_order": 0
+    },
+    {
+      "customer_name": "David Okonkwo",
+      "customer_location": "Lagos",
+      "customer_designation": "Entrepreneur",
+      "rating": 5,
+      "title": "The mountain did not rush us",
+      "review": "Zermatt can be a circus. Ours was not. Ski host in the morning, fire in the afternoon, and a chalet team who never hovered. Pure Luxe understood we were not on holiday to be entertained.",
+      "profile_image_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
+      "background_image_url": "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=1400&q=80",
+      "destination_slug": "switzerland",
+      "package_slug": "zermatt-alpine-atelier",
+      "travel_date": "2025-01-08T00:00:00Z",
+      "is_featured": true,
+      "homepage_featured": true,
+      "display_order": 1
+    },
+    {
+      "customer_name": "Priya Mehta",
+      "customer_location": "Mumbai",
+      "customer_designation": "Architect",
+      "rating": 5,
+      "title": "Ubud without the performance",
+      "review": "I was tired of wellness that shouts. The villa was simple and beautiful. Yoga happened. So did doing nothing. That is rarer than it sounds.",
+      "profile_image_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
+      "background_image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=80",
+      "destination_slug": "bali",
+      "package_slug": "bali-jungle-sanctuary",
+      "travel_date": "2025-07-22T00:00:00Z",
+      "is_featured": false,
+      "homepage_featured": true,
+      "display_order": 2
+    },
+    {
+      "customer_name": "Thomas Berger",
+      "customer_location": "Vienna",
+      "customer_designation": "Family office",
+      "rating": 5,
+      "title": "City, then silence",
+      "review": "Dubai for the children, desert for us. The camp felt like it had been set for two people even though we were six. Maya on WhatsApp at 1am when a flight moved. That is the standard.",
+      "profile_image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+      "background_image_url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=80",
+      "destination_slug": "dubai",
+      "package_slug": "dubai-skyline-and-dunes",
+      "travel_date": "2025-11-30T00:00:00Z",
+      "is_featured": false,
+      "homepage_featured": false,
+      "display_order": 3
+    },
+    {
+      "customer_name": "Sophie Laurent",
+      "customer_location": "Paris",
+      "customer_designation": "Editor",
+      "rating": 5,
+      "title": "They listened the first time",
+      "review": "I said I did not want a packed itinerary. They sent three days and a lot of white space. I have used larger agencies who hear the opposite of what you say. Not here.",
+      "profile_image_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+      "background_image_url": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1400&q=80",
+      "travel_date": "2024-10-05T00:00:00Z",
+      "is_featured": false,
+      "homepage_featured": false,
+      "display_order": 4
+    }
+  ]
+}

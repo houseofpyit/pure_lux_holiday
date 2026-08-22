@@ -1,0 +1,416 @@
+{
+  "categories": [
+    {
+      "name": "Signature Escapes",
+      "slug": "signature-escapes"
+    },
+    {
+      "name": "Wellness Retreats",
+      "slug": "wellness-retreats"
+    },
+    {
+      "name": "Adventure & Safaris",
+      "slug": "adventure-safaris"
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Maldives",
+      "slug": "maldives",
+      "country": "Maldives",
+      "short_description": "Private overwater villas, crystal-clear lagoons, and bespoke underwater dining.",
+      "image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8",
+      "button_text": "Explore Maldives",
+      "is_featured": true
+    },
+    {
+      "name": "Switzerland",
+      "slug": "switzerland",
+      "country": "Switzerland",
+      "short_description": "Majestic alpine peaks, pristine lakes, and legendary ski chalets in Zermatt.",
+      "image_url": "https://images.unsplash.com/photo-1486916856992-e4db22c8df33",
+      "button_text": "Discover Alps",
+      "is_featured": true
+    },
+    {
+      "name": "Bali",
+      "slug": "bali",
+      "country": "Indonesia",
+      "short_description": "Mystical temples, private jungle pool villas, and tranquil beaches of Uluwatu.",
+      "image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
+      "button_text": "Experience Bali",
+      "is_featured": true
+    },
+    {
+      "name": "Dubai",
+      "slug": "dubai",
+      "country": "UAE",
+      "short_description": "Futuristic skyscrapers, ultra-luxury desert resorts, and private yacht cruises.",
+      "image_url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c",
+      "button_text": "Unveil Dubai",
+      "is_featured": true
+    }
+  ],
+  "packages": [
+    {
+      "category_slug": "signature-escapes",
+      "title": "Maldives Ultimate Overwater Retreat",
+      "slug": "maldives-ultimate-overwater-retreat",
+      "short_description": "Surrender to absolute island luxury with private dining, dolphin cruises, and overwater spa treatments.",
+      "description": "<p>Experience the absolute peak of tropical luxury. Located in the pristine Baa Atoll, a UNESCO biosphere reserve, your residence is an architectural masterpiece suspended over an emerald lagoon.</p><p>With a private slide plunging straight into the ocean, a retractable roof for stargazing from bed, and a personal chef on call, this is not just a holiday—it is a bespoke sanctuary created around your exact desires.</p>",
+      "country": "Maldives",
+      "city": "Baa Atoll",
+      "duration_days": 6,
+      "duration_nights": 5,
+      "starting_price": 12500,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": true,
+      "featured_image_url": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8",
+      "banner_image_url": "https://images.unsplash.com/photo-1439066615861-d1af74d74000",
+      "highlights": [
+        {
+          "title": "Private Yacht Transfer",
+          "icon": "Ship",
+          "display_order": 1
+        },
+        {
+          "title": "24/7 Dedicated Butler",
+          "icon": "UserCheck",
+          "display_order": 2
+        },
+        {
+          "title": "Underwater Dining Experience",
+          "icon": "Utensils",
+          "display_order": 3
+        }
+      ],
+      "itinerary": [
+        {
+          "day_number": 1,
+          "title": "Arrival in Paradise",
+          "description": "Touch down at Velana International Airport (Male) where your personal representative welcomes you and escorts you to your private luxury yacht. Enjoy fresh coconuts and gourmet canapés as you cruise towards the Baa Atoll. Check into your massive overwater residence, meet your personal butler, and enjoy a curated sunset welcome dinner on your private deck.",
+          "hotel": "Soneva Jani",
+          "meal_plan": "Dinner Included",
+          "display_order": 1
+        },
+        {
+          "day_number": 2,
+          "title": "Overwater Spa & Sunset Dolphin Cruise",
+          "description": "Awake to a floating breakfast in your private infinity pool. Spend the morning relaxing before a 90-minute couples massage in a glass-bottomed overwater spa pavilion. In the late afternoon, embark on a private double-decker yacht for a sunset dolphin-watching cruise, accompanied by premium champagne and sashimi prepared on board.",
+          "hotel": "Soneva Jani",
+          "meal_plan": "Breakfast & Dinner",
+          "display_order": 2
+        },
+        {
+          "day_number": 3,
+          "title": "Manta Ray Snorkeling at Hanifaru Bay",
+          "description": "Board a speed-craft with a marine biologist and head to Hanifaru Bay, one of the world's most famous aggregation sites for manta rays and whale sharks. Swim alongside these majestic giants in crystal-clear waters. Return to the resort for a beachside wood-fired pizza lunch and a free afternoon to enjoy the water slide.",
+          "hotel": "Soneva Jani",
+          "meal_plan": "Breakfast & Lunch",
+          "display_order": 3
+        },
+        {
+          "day_number": 4,
+          "title": "Castaway Sandbank Picnic",
+          "description": "Your butler escorts you to a completely private, deserted sandbank where a luxury canopy has been set up. Spend the afternoon snorkeling, swimming, or sunbathing in total isolation. A private chef prepares a bespoke barbecue lunch featuring fresh local lobster, Wagyu beef, and exotic tropical fruits.",
+          "hotel": "Soneva Jani",
+          "meal_plan": "Breakfast, Lunch & Dinner",
+          "display_order": 4
+        },
+        {
+          "day_number": 5,
+          "title": "Deep Ocean Gastronomy",
+          "description": "Relax on your deck or enjoy stand-up paddleboarding. In the evening, descend five meters below the sea surface for a farewell dinner at a world-class glass-domed underwater restaurant. Indulge in a 6-course tasting menu paired with fine vintage wines while coral reefs and colorful marine life glide overhead.",
+          "hotel": "Soneva Jani",
+          "meal_plan": "Breakfast & Dinner",
+          "display_order": 5
+        },
+        {
+          "day_number": 6,
+          "title": "Departure via Private Seaplane",
+          "description": "Savor one final sunrise yoga session followed by breakfast. Bid farewell to your butler and board a private seaplane charter. Enjoy a scenic flight over the islands before connecting to your international flight at Male.",
+          "hotel": "None (Departure)",
+          "meal_plan": "Breakfast Included",
+          "display_order": 6
+        }
+      ],
+      "inclusions": [
+        {
+          "title": "Bespoke VIP airport fast-track clearance",
+          "display_order": 1
+        },
+        {
+          "title": "All private yacht and seaplane transfers",
+          "display_order": 2
+        },
+        {
+          "title": "5 nights in an Ultra Luxury Overwater Residence",
+          "display_order": 3
+        },
+        {
+          "title": "Daily chef-curated breakfast, lunch, and specialty dinners",
+          "display_order": 4
+        },
+        {
+          "title": "Unlimited access to overwater spa treatments & yoga",
+          "display_order": 5
+        },
+        {
+          "title": "Personal butler and private marine biologist guide",
+          "display_order": 6
+        }
+      ],
+      "exclusions": [
+        {
+          "title": "International flight tickets",
+          "display_order": 1
+        },
+        {
+          "title": "Vintage cellar selection champagnes (house brands included)",
+          "display_order": 2
+        },
+        {
+          "title": "Personal travel and medical insurance",
+          "display_order": 3
+        }
+      ],
+      "gallery_urls": [
+        "https://images.unsplash.com/photo-1514282401047-d79a71a590e8",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+        "https://images.unsplash.com/photo-1439066615861-d1af74d74000",
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
+        "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9"
+      ],
+      "faqs": [
+        {
+          "question": "Is the seaplane transfer private?",
+          "answer": "Yes, we arrange private seaplane charters to ensure maximum privacy, safety, and direct scheduling aligned with your international arrival time.",
+          "display_order": 1
+        },
+        {
+          "question": "Can the menu be tailored to dietary requirements?",
+          "answer": "Absolutely. Your personal butler will contact you before departure to gather all food preferences and allergies, and your private chef will tailor all meals accordingly.",
+          "display_order": 2
+        }
+      ],
+      "testimonials": [
+        {
+          "customer_name": "Eleanor Vance",
+          "customer_location": "London, UK",
+          "customer_designation": "Executive Director",
+          "rating": 5,
+          "title": "Pure Heaven on Earth",
+          "review": "The overwater villa was beyond words. Having a private chef make breakfast on our deck while watching baby reef sharks swim by was an unforgettable highlight. Worth every single penny.",
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "category_slug": "signature-escapes",
+      "title": "Alpine Elegance & Zermatt Luxury",
+      "slug": "alpine-elegance-zermatt-luxury",
+      "short_description": "A majestic winter journey through the peak of Switzerland's luxury hospitality under the Matterhorn.",
+      "description": "<p>Experience the Swiss Alps in unmatched grandeur. Nestled in the car-free mountain village of Zermatt, your chalet is a masterpiece of alpine design, combining rustic timber with modern glass facades facing the Matterhorn.</p><p>Enjoy private heli-skiing, Michelin-starred gastronomy, and private thermal baths high above the clouds.</p>",
+      "country": "Switzerland",
+      "city": "Zermatt",
+      "duration_days": 7,
+      "duration_nights": 6,
+      "starting_price": 18900,
+      "currency": "USD",
+      "is_featured": true,
+      "is_popular": false,
+      "featured_image_url": "https://images.unsplash.com/photo-1486916856992-e4db22c8df33",
+      "banner_image_url": "https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9",
+      "highlights": [
+        {
+          "title": "Private Heli-Skiing Tour",
+          "icon": "Plane",
+          "display_order": 1
+        },
+        {
+          "title": "Michelin-Starred Dining",
+          "icon": "ChefHat",
+          "display_order": 2
+        },
+        {
+          "title": "Chalet Wine Tasting",
+          "icon": "GlassWater",
+          "display_order": 3
+        }
+      ],
+      "itinerary": [
+        {
+          "day_number": 1,
+          "title": "Swiss Arrival & Glacier Express",
+          "description": "Land in Zurich or Geneva and board a first-class panoramic train journey or helicopter transfer straight into the car-free village of Zermatt. Check into your designer mountain chalet and enjoy a custom welcome reception featuring Swiss chocolate and vintage local wines.",
+          "hotel": "The Omnia Zermatt",
+          "meal_plan": "Dinner Included",
+          "display_order": 1
+        },
+        {
+          "day_number": 2,
+          "title": "First Tracks with Ski Master",
+          "description": "Grip the snow early. A private ski instructor guides you through Zermatt's massive ski area, extending into Cervinia, Italy. Stop for a slopeside lunch at a historic mountainside tavern serving upscale regional cuisine.",
+          "hotel": "The Omnia Zermatt",
+          "meal_plan": "Breakfast & Lunch",
+          "display_order": 2
+        },
+        {
+          "day_number": 3,
+          "title": "Heli-Skiing & Champagne Toast",
+          "description": "Embark on an adrenaline-filled heli-skiing trip to Monte Rosa. Guided by an expert, carve fresh tracks down untouched powder fields. Break on a glacier peak for a champagne toast with spectacular views of the Matterhorn.",
+          "hotel": "The Omnia Zermatt",
+          "meal_plan": "Breakfast & Lunch",
+          "display_order": 3
+        },
+        {
+          "day_number": 4,
+          "title": "Thermal Baths & Wellness Day",
+          "description": "Soothe your muscles. Spend the day in a private thermal spa featuring outdoor heated pools overlooking snow-clad peaks, steam caves, and custom aromatherapy massages.",
+          "hotel": "The Omnia Zermatt",
+          "meal_plan": "Breakfast & Dinner",
+          "display_order": 4
+        },
+        {
+          "day_number": 5,
+          "title": "Cheese & Sommelier Wine Pairing",
+          "description": "Spend a relaxed morning exploring Zermatt's shops. In the evening, enjoy a private cheese fondue and wine masterclass in your chalet led by a master sommelier, sampling rare alpine vintages.",
+          "hotel": "The Omnia Zermatt",
+          "meal_plan": "Breakfast & Dinner",
+          "display_order": 5
+        },
+        {
+          "day_number": 6,
+          "title": "Matterhorn Culinary Finale",
+          "description": "Take a scenic cable car to the Matterhorn Glacier Paradise. In the evening, celebrate your final night with a Michelin-starred gourmet dining experience, highlighting modern alpine gastronomy.",
+          "hotel": "The Omnia Zermatt",
+          "meal_plan": "Breakfast & Dinner",
+          "display_order": 6
+        },
+        {
+          "day_number": 7,
+          "title": "Farewell Alps",
+          "description": "Savor a final Swiss breakfast before checking out. Board a luxury private transfer or first-class train back to the airport for your flight home.",
+          "hotel": "None (Departure)",
+          "meal_plan": "Breakfast Included",
+          "display_order": 7
+        }
+      ],
+      "inclusions": [
+        {
+          "title": "6 nights in a Luxury Chalet Suite with Matterhorn views",
+          "display_order": 1
+        },
+        {
+          "title": "Private ski instructor & premium rental equipment",
+          "display_order": 2
+        },
+        {
+          "title": "All meals described in the itinerary",
+          "display_order": 3
+        },
+        {
+          "title": "Private heli-skiing excursion to Monte Rosa",
+          "display_order": 4
+        },
+        {
+          "title": "Daily access to private thermal spa facilities & treatments",
+          "display_order": 5
+        }
+      ],
+      "exclusions": [
+        {
+          "title": "Ski pass cards (available for purchase at check-in)",
+          "display_order": 1
+        },
+        {
+          "title": "International flights to/from Switzerland",
+          "display_order": 2
+        }
+      ],
+      "gallery_urls": [
+        "https://images.unsplash.com/photo-1486916856992-e4db22c8df33",
+        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+        "https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9",
+        "https://images.unsplash.com/photo-1520156557489-3176de20bf4b"
+      ],
+      "faqs": [
+        {
+          "question": "Is this package suitable for beginners?",
+          "answer": "Yes, we tailor ski routes and private instruction to all levels, from absolute beginners to expert skiers.",
+          "display_order": 1
+        }
+      ],
+      "testimonials": [
+        {
+          "customer_name": "Marc-Antoine",
+          "customer_location": "Paris, France",
+          "customer_designation": "Entrepreneur",
+          "rating": 5,
+          "title": "Incredible Alpine Experience",
+          "review": "Everything from the train transfer to the helicopter glacier tour was planned to perfection. The chalet was a dream and the food was Michelin-grade.",
+          "display_order": 1
+        }
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Private Yacht Charters",
+      "slug": "yacht-charters",
+      "short_description": "Sail the azure waters of the Mediterranean or the Maldives on board an ultra-private superyacht, staffed by an expert crew and a personal chef.",
+      "icon": "Ship",
+      "image_url": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a",
+      "button_text": "Charter a Yacht",
+      "display_order": 1
+    },
+    {
+      "title": "Aviation & Helicopter Tours",
+      "slug": "helicopter-tours",
+      "short_description": "Soar above majestic mountain ranges, active volcanoes, or private islands with custom helicopter charters and scenic aviation tours.",
+      "icon": "Plane",
+      "image_url": "https://images.unsplash.com/photo-1540962351504-03099e0a754b",
+      "button_text": "Fly Private",
+      "display_order": 2
+    },
+    {
+      "title": "Culinary Masterclasses & Tasting",
+      "slug": "culinary-tastings",
+      "short_description": "Indulge in private masterclasses led by Michelin-starred chefs, paired with exclusive vintage tastings guided by master sommeliers.",
+      "icon": "Utensils",
+      "image_url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+      "button_text": "Indulge Now",
+      "display_order": 3
+    }
+  ],
+  "collections": [
+    {
+      "title": "Signature Escapes",
+      "slug": "signature-escapes",
+      "short_description": "Private islands, fully crewed superyachts, and exclusive residences.",
+      "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+      "button_text": "Discover Signature",
+      "button_url": "/packages",
+      "display_order": 1
+    },
+    {
+      "title": "Wellness Retreats",
+      "slug": "wellness-retreats",
+      "short_description": "Secluded wellness havens, bespoke nourishment, and expert yoga programs.",
+      "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
+      "button_text": "Explore Wellness",
+      "button_url": "/packages",
+      "display_order": 2
+    },
+    {
+      "title": "Adventure & Safaris",
+      "slug": "adventure-safaris",
+      "short_description": "Private heli-skiing, glacier landings, and bespoke wild safaris.",
+      "image_url": "https://images.unsplash.com/photo-1520156557489-3176de20bf4b",
+      "button_text": "Experience Adventure",
+      "button_url": "/packages",
+      "display_order": 3
+    }
+  ]
+}

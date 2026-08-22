@@ -1,0 +1,268 @@
+/**
+ * DestinationsCtaCms — Destinations Page › CTA Section
+ *
+ * Reuses the exact same preview and field layout as ConciergeCtaCms (Home)
+ * and AboutCtaCms (About). Pattern is consistent across all three pages.
+ *
+ * ─── Backend APIs reused ─────────────────────────────────────────────────────
+ *   The Destinations page shares the global CTA singleton at:
+ *     GET  /api/v1/home/cta   — reads shared CTA config
+ *     PUT  /api/v1/home/cta   — writes shared CTA config
+ *
+ *   If a dedicated per-page CTA is needed in future, add a new endpoint:
+ *     GET  /api/v1/destinations/cta
+ *     PUT  /api/v1/destinations/cta
+ *
+ *   Fields available on the existing CTA backend:
+ *     title           → Main heading (required)
+ *     subtitle        → Body paragraph
+ *     button_text     → Button label
+ *     button_url      → Button link
+ *     background_image_id → Media UUID
+ *     is_active       → Visibility toggle
+ *
+ *   New fields (stored locally until backend is extended):
+ *     eyebrow_text    → Script label above the heading
+ *     overlay_opacity → Dark overlay strength 0–100
+ *
+ * React Query keys:
+ *   Reuses ['home', 'cta'] from use-home.js
+ */
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ChevronLeft, Save, Loader2, Eye, EyeOff } from 'lucide-react';
+import PageHeader from '@/components/admin/PageHeader';
+import { DrawerField, DrawerInput } from '@/components/admin/Drawer';
+import MediaUploader from '@/components/media/MediaUploader';
+import { useCTA, useUpdateCTA } from '@/hooks/use-home';
+import { useToast } from '@/components/ui/use-toast';
+import { handleApiError } from '@/lib/handleApiError';
+
+const cn = (...c) => c.filter(Boolean).join(' ');
+
+const DRAFT_KEY = 'dest_cta_draft';
+function loadDraft() { try { return JSON.parse(localStorage.getItem(DRAFT_KEY) ?? '{}'); } catch { return {}; } }
+function saveDraft(v) { try { localStorage.setItem(DRAFT_KEY, JSON.stringify(v)); } catch { /* ignore */ } }
+
+export default function DestinationsCtaCms() {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const { data: ctaData, isLoading, isError } = useCTA();
+  const [form, setForm] = useState(null);
+  const [previewOpen, setPreviewOpen] = useState(true);
+  const [extForm, setExtForm] = useState({ eyebrow_text: 'Your Journey Awaits', overlay_opacity: 65 });
+
+  useEffect(() => {
+    if (ctaData && !form) {
+      setForm(ctaData);
+      const draft = loadDraft();
+      setExtForm((p) => ({ ...p, ...draft }));
+    }
+  }, [ctaData]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const updateMutation = useUpdateCTA({
+    onSuccess: () => { saveDraft(extForm); toast({ title: 'CTA section saved' }); },
+    onError: (err) => handleApiError(err, toast),
+  });
+
+  const handleChange = (field, value) => setForm((f) => ({ ...f, [field]: value }));
+  const handleExtChange = (field, value) => setExtForm((f) => ({ ...f, [field]: value }));
+
+  const handleSave = () => {
+    if (!form || updateMutation.isPending) return;
+    if (!form.title?.trim()) {
+      toast({ title: 'Heading is required', variant: 'destructive' });
+      return;
+    }
+    saveDraft(extForm);
+    updateMutation.mutate(form);
+  };
+
+  if (isLoading || !form) return (
+    <div className="flex items-center justify-center min-h-[400px]">
+      <Loader2 className="w-8 h-8 animate-spin text-primary" />
+    </div>
+  );
+
+  if (isError) return (
+    <div className="flex flex-col items-center justify-center min-h-[400px] gap-3 text-destructive">
+      <p className="text-sm">Failed to load CTA data</p>
+    </div>
+  );
+
+  const isSaving = updateMutation.isPending;
+  const overlayOpacity = (extForm.overlay_opacity ?? 65) / 100;
+
+  return (
+    <div>
+      <button
+        onClick={() => navigate('/admin/website/destinations')}
+        className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-4"
+      >
+        <ChevronLeft className="w-4 h-4" /> Destinations Page
+      </button>
+
+      <PageHeader
+        title="CTA Section"
+        description="Full-width call-to-action banner — reuses the global CTA configuration"
+        searchPlaceholder=""
+        onSearch={null} onAdd={null} filters={null} onFilter={null}
+        activeFilter={null} onSort={null} onExport={null} onImport={null}
+        actions={
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setPreviewOpen((v) => !v)}
+              className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-primary bg-primary/8 border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors"
+            >
+              {previewOpen ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              {previewOpen ? 'Hide Preview' : 'Preview'}
+            </button>
+            <button
+              onClick={handleSave}
+              disabled={isSaving}
+              className="flex items-center gap-2 px-3.5 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors shadow-soft disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
+              {isSaving ? 'Saving…' : 'Save Changes'}
+            </button>
+          </div>
+        }
+      />
+
+      {/* Shared CTA notice */}
+      <div className="flex items-start gap-3 mb-5 px-4 py-3 bg-blue-50 border border-blue-200 rounded-xl text-sm text-blue-800">
+        <span className="shrink-0 mt-0.5">ℹ</span>
+        <span>
+          This CTA shares the global CTA configuration with the Home page. Saving here updates it site-wide.
+          A dedicated per-page CTA endpoint can be added to the backend in future if needed.
+        </span>
+      </div>
+
+      {/* Live Preview */}
+      {previewOpen && (
+        <div className="mb-6 rounded-xl overflow-hidden border border-border">
+          <div className="relative min-h-[240px] flex items-center justify-center overflow-hidden">
+            {form.background_image_url ? (
+              <img src={form.background_image_url} alt="" className="absolute inset-0 w-full h-full object-cover" />
+            ) : (
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 to-emerald-700" />
+            )}
+            <div className="absolute inset-0 bg-emerald-950" style={{ opacity: overlayOpacity }} />
+            <div className="relative z-10 text-center px-8 py-10 max-w-lg mx-auto">
+              {extForm.eyebrow_text && (
+                <p className="text-amber-300/90 text-lg italic mb-3 font-medium">{extForm.eyebrow_text}</p>
+              )}
+              <h2 className="text-white font-bold text-2xl leading-snug mb-4">
+                {form.title || <span className="text-white/30 font-normal italic text-lg">No heading</span>}
+              </h2>
+              {form.subtitle && (
+                <p className="text-white/65 text-sm leading-relaxed mb-6 max-w-sm mx-auto">{form.subtitle}</p>
+              )}
+              {form.button_text && (
+                <span className="inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-300 to-yellow-400 text-emerald-900 text-xs font-bold uppercase tracking-wider shadow-lg">
+                  {form.button_text}
+                </span>
+              )}
+            </div>
+          </div>
+          <div className="px-4 py-2 bg-muted/40 border-t border-border flex items-center gap-2">
+            <Eye className="w-3.5 h-3.5 text-muted-foreground" />
+            <span className="text-xs text-muted-foreground">Preview updates as you type</span>
+          </div>
+        </div>
+      )}
+
+      {/* Form */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        {/* Left — content */}
+        <div className="space-y-5">
+          <div className="bg-white border border-border rounded-xl p-6 space-y-5">
+            <div>
+              <h3 className="text-sm font-semibold text-foreground">Content</h3>
+              <p className="text-xs text-muted-foreground mt-0.5">Saved to the global CTA backend record</p>
+            </div>
+            <DrawerField
+              label={<span>Eyebrow Label <span className="text-amber-500 font-mono text-xs">*</span></span>}
+              hint='Script text above the heading' required={false}
+            >
+              <DrawerInput
+                value={extForm.eyebrow_text}
+                onChange={(e) => handleExtChange('eyebrow_text', e.target.value)}
+                placeholder="Your Journey Awaits"
+                maxLength={100}
+              />
+            </DrawerField>
+            <DrawerField label="Heading" hint="" required={false}>
+              <DrawerInput
+                value={form.title}
+                onChange={(e) => handleChange('title', e.target.value)}
+                placeholder="Ready to Begin Your Extraordinary Journey?"
+                maxLength={255}
+              />
+            </DrawerField>
+            <DrawerField label="Body Text" hint="" required={false}>
+              <DrawerInput
+                textarea
+                value={form.subtitle}
+                onChange={(e) => handleChange('subtitle', e.target.value)}
+                placeholder="Let our travel specialists craft a bespoke itinerary…"
+              />
+            </DrawerField>
+          </div>
+
+          <div className="bg-white border border-border rounded-xl p-6 space-y-4">
+            <h3 className="text-sm font-semibold text-foreground">Button</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <DrawerField label="Button Text" hint="" required={false}>
+                <DrawerInput value={form.button_text} onChange={(e) => handleChange('button_text', e.target.value)} placeholder="Plan My Journey" maxLength={100} />
+              </DrawerField>
+              <DrawerField label="Button Link" hint="" required={false}>
+                <DrawerInput value={form.button_url} onChange={(e) => handleChange('button_url', e.target.value)} placeholder="/plan-my-journey" />
+              </DrawerField>
+            </div>
+          </div>
+        </div>
+
+        {/* Right — background + overlay */}
+        <div className="space-y-5">
+          <div className="bg-white border border-border rounded-xl p-6">
+            <div className="mb-4">
+              <h3 className="text-sm font-semibold text-foreground">Background Image</h3>
+              <p className="text-xs text-muted-foreground mt-0.5">Recommended: 1920×600px · Max 10MB</p>
+            </div>
+            <MediaUploader
+              module="destinations"
+              section="cta"
+              accept="image/*"
+              maxSizeMB={10}
+              value={form.background_image_url}
+              mediaId={form.background_image_id}
+              onChange={(media) => setForm((f) => ({ ...f, background_image_id: media.id, background_image_url: media.full_url }))}
+              onClear={() => setForm((f) => ({ ...f, background_image_id: null, background_image_url: null }))}
+              label="Upload background image"
+              hint="Wide landscape photo works best"
+            />
+          </div>
+
+          <div className="bg-white border border-border rounded-xl p-6 space-y-4">
+            <h3 className="text-sm font-semibold text-foreground">Overlay Opacity <span className="text-amber-500 font-mono text-xs">*</span></h3>
+            <DrawerField label={`Opacity: ${extForm.overlay_opacity}%`} hint="Controls the dark overlay over the background image" required={false}>
+              <input
+                type="range" min={0} max={100}
+                value={extForm.overlay_opacity}
+                onChange={(e) => handleExtChange('overlay_opacity', Number(e.target.value))}
+                className="w-full accent-primary"
+              />
+              <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                <span>0%</span><span>{extForm.overlay_opacity}%</span><span>100%</span>
+              </div>
+            </DrawerField>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
