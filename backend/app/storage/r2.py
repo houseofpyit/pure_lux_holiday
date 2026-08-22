@@ -75,6 +75,29 @@ class R2StorageProvider(StorageProvider):
         logger.info("File saved to R2: {}", file_path)
         return await self.generate_url(file_path)
 
+    async def delete_prefix(self, prefix: str) -> int:
+        normalized = prefix.strip("/")
+        if normalized:
+            normalized = f"{normalized}/"
+        return await asyncio.to_thread(self._delete_prefix_sync, normalized)
+
+    def _delete_prefix_sync(self, prefix: str) -> int:
+        deleted = 0
+        paginator = self._client.get_paginator("list_objects_v2")
+        for page in paginator.paginate(Bucket=self._bucket, Prefix=prefix):
+            contents = page.get("Contents") or []
+            if not contents:
+                continue
+            batch = [{"Key": item["Key"]} for item in contents]
+            self._client.delete_objects(
+                Bucket=self._bucket,
+                Delete={"Objects": batch, "Quiet": True},
+            )
+            deleted += len(batch)
+        if deleted:
+            logger.info("Deleted {} object(s) from R2 with prefix '{}'", deleted, prefix or "(all)")
+        return deleted
+
     async def delete_file(self, file_path: str) -> bool:
         try:
             await asyncio.to_thread(

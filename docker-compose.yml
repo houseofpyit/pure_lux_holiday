@@ -62,6 +62,8 @@ services:
       R2_ENDPOINT_URL: ${R2_ENDPOINT_URL:-}
       ALLOWED_ORIGINS: '${ALLOWED_ORIGINS:-["http://localhost:3000","http://localhost:5173","http://localhost:5174","http://127.0.0.1:5173","http://127.0.0.1:5174"]}'
       RUN_SEED: ${RUN_SEED:-true}
+      SEED_CLEAR_STORAGE: ${SEED_CLEAR_STORAGE:-true}
+      SEED_CLEAR_ALL_STORAGE: ${SEED_CLEAR_ALL_STORAGE:-false}
       UVICORN_WORKERS: ${UVICORN_WORKERS:-2}
     volumes:
       - backend_uploads:/app/uploads
@@ -76,7 +78,7 @@ services:
       interval: 15s
       timeout: 5s
       retries: 8
-      start_period: 25s
+      start_period: 30s
 
   admin:
     build:

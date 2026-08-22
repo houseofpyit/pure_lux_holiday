@@ -430,10 +430,16 @@ async def seed_packages(session: AsyncSession, data: dict[str, Any]) -> dict[str
     for pkg in data.get("packages", []):
         slug = pkg["slug"]
         featured_image_id = await get_or_create_media(
-            session, pkg.get("featured_image_url"), f"pkg_feat_{slug}.jpg"
+            session,
+            pkg.get("featured_image_url"),
+            f"pkg_feat_{slug}.jpg",
+            fallback_url=pkg.get("banner_image_url"),
         )
         banner_image_id = await get_or_create_media(
-            session, pkg.get("banner_image_url"), f"pkg_banner_{slug}.jpg"
+            session,
+            pkg.get("banner_image_url"),
+            f"pkg_banner_{slug}.jpg",
+            fallback_url=pkg.get("featured_image_url"),
         )
         row, created = await upsert_by(
             session,
@@ -672,10 +678,16 @@ async def seed_blog(session: AsyncSession, data: dict[str, Any]) -> None:
     for item in data.get("articles", []):
         slug = item["slug"]
         featured_image_id = await get_or_create_media(
-            session, item.get("featured_image_url"), f"article_{slug}.jpg"
+            session,
+            item.get("featured_image_url"),
+            f"article_{slug}.jpg",
+            fallback_url=item.get("banner_image_url"),
         )
         banner_image_id = await get_or_create_media(
-            session, item.get("banner_image_url"), f"article_banner_{slug}.jpg"
+            session,
+            item.get("banner_image_url"),
+            f"article_banner_{slug}.jpg",
+            fallback_url=item.get("featured_image_url"),
         )
         row, created = await upsert_by(
             session,

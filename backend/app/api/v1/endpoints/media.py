@@ -210,7 +210,7 @@ async def delete_media(
     session: AsyncSession = Depends(get_db_session),
     current_user: CurrentUserResponse = Depends(require_admin),
 ) -> dict[str, str]:
-    """Soft-delete a media item (admin only). File is NOT permanently removed."""
+    """Soft-delete a media item (admin only). Also removes the file from R2/local storage."""
     await MediaService(session).soft_delete(media_id)
     return {"message": "Media deleted successfully"}
 

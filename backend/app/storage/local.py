@@ -50,6 +50,28 @@ class LocalStorageProvider(StorageProvider):
         logger.info("File saved: {}", file_path)
         return file_path
 
+    async def delete_prefix(self, prefix: str) -> int:
+        root = self.base_path / prefix.strip("/")
+        if not root.exists():
+            return 0
+
+        deleted = 0
+        for path in sorted(root.rglob("*"), reverse=True):
+            if path.is_file():
+                path.unlink()
+                deleted += 1
+
+        for path in sorted(root.rglob("*"), reverse=True):
+            if path.is_dir():
+                try:
+                    path.rmdir()
+                except OSError:
+                    pass
+
+        if deleted:
+            logger.info("Deleted {} file(s) under local prefix '{}'", deleted, prefix)
+        return deleted
+
     async def delete_file(self, file_path: str) -> bool:
         """Delete a file from the local filesystem.
 

@@ -29,6 +29,7 @@ from app.storage.factory import get_storage_provider
 from app.storage.base import StorageProvider
 from app.utils.media.file_validator import FileValidationError, FileValidator
 from app.utils.media.image_processor import ImageProcessor
+from app.utils.media.storage_path import media_storage_path
 from app.db.utils.pagination import PaginationParams
 from app.db.utils.sorting import SortParams
 
@@ -249,13 +250,23 @@ class MediaService:
     # ── Delete / Restore ──────────────────────────────────────────────────────
 
     async def soft_delete(self, media_id: uuid.UUID) -> None:
-        """Soft-delete a media item (marks is_deleted=True, does NOT remove the file)."""
+        """Soft-delete a media item and remove its file from storage."""
         media = await self.repository.get_by_id(media_id)
         if media is None or media.is_deleted:
             raise MediaNotFoundException()
+
+        storage_path = media_storage_path(media)
+        if storage_path:
+            await self.storage.delete_file(storage_path)
+        else:
+            logger.warning(
+                "Media {} has no managed storage path — skipping file delete",
+                media_id,
+            )
+
         media.soft_delete()
         await self.repository.session.flush()
-        logger.info("Media soft deleted: {}", media_id)
+        logger.info("Media soft deleted (storage removed): {}", media_id)
 
     async def restore(self, media_id: uuid.UUID) -> MediaDetailResponse:
         """Restore a soft-deleted media item."""

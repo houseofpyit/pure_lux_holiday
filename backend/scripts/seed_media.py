@@ -105,19 +105,61 @@ async def _upload_seed_bytes(
     return await storage.generate_url(storage_path)
 
 
+async def _find_existing_media(
+    session: AsyncSession,
+    filename: str,
+) -> Media | None:
+    """Find the best existing seed media row for a filename.
+
+    Older seeds could create duplicate rows with the same filename (website +
+    packages seeders, or legacy URL-based lookups). Prefer the newest row.
+    """
+    result = await session.execute(
+        select(Media)
+        .where(
+            Media.filename == filename,
+            Media.is_deleted.is_(False),
+        )
+        .order_by(Media.updated_at.desc())
+    )
+    rows = list(result.scalars().all())
+    if not rows:
+        return None
+    if len(rows) > 1:
+        logger.warning(
+            "Duplicate media filename '{}' found ({} rows) — reusing newest",
+            filename,
+            len(rows),
+        )
+    return rows[0]
+
+
+async def _download_and_upload(
+    url: str,
+    filename: str,
+    folder: str,
+) -> tuple[str, str, str, int, Optional[int], Optional[int], str]:
+    """Download a remote image and upload it to storage."""
+    data, ext, mime_type = await _download_image(url)
+    filename = f"{Path(filename).stem}{ext}"
+    file_url = await _upload_seed_bytes(data, filename, folder, mime_type)
+    width, height = _extract_dimensions(data)
+    return file_url, ext, mime_type, len(data), width, height, filename
+
+
 async def get_or_create_media(
     session: AsyncSession,
     url: Optional[str],
     name: str,
     folder: str = "seed",
+    fallback_url: Optional[str] = None,
 ) -> Optional[uuid.UUID]:
     """Create or reuse a media row, uploading remote seed URLs into storage."""
     if not url:
         return None
 
     filename = _normalize_filename(name)
-    result = await session.execute(select(Media).where(Media.filename == filename))
-    existing = result.scalar_one_or_none()
+    existing = await _find_existing_media(session, filename)
 
     if existing and _is_managed_storage_url(existing.file_url):
         return existing.id
@@ -130,24 +172,49 @@ async def get_or_create_media(
         width = existing.width if existing else None
         height = existing.height if existing else None
     else:
-        try:
-            data, ext, mime_type = await _download_image(url)
-        except Exception as exc:
-            logger.warning("Seed image download failed for {}: {}", url, exc)
-            if existing:
+        download_urls = [url]
+        if fallback_url and fallback_url != url:
+            download_urls.append(fallback_url)
+
+        file_url = ext = mime_type = None
+        size = 1024
+        width = height = None
+        last_exc: Exception | None = None
+
+        for candidate_url in download_urls:
+            try:
+                file_url, ext, mime_type, size, width, height, filename = (
+                    await _download_and_upload(candidate_url, filename, folder)
+                )
+                logger.info(
+                    "Seed image uploaded to storage: {} -> {}",
+                    candidate_url,
+                    file_url,
+                )
+                break
+            except Exception as exc:
+                last_exc = exc
+                logger.warning(
+                    "Seed image download failed for {}: {}",
+                    candidate_url,
+                    exc,
+                )
+
+        if file_url is None:
+            if existing and _is_managed_storage_url(existing.file_url):
                 return existing.id
-            file_url = url
-            ext = Path(filename).suffix.lower() or ".jpg"
-            mime_type = _MIME_BY_EXT.get(ext, "image/jpeg")
-            size = 1024
-            width = None
-            height = None
-        else:
-            filename = f"{Path(filename).stem}{ext}"
-            file_url = await _upload_seed_bytes(data, filename, folder, mime_type)
-            size = len(data)
-            width, height = _extract_dimensions(data)
-            logger.info("Seed image uploaded to storage: {} -> {}", url, file_url)
+            if existing:
+                logger.warning(
+                    "Keeping existing media row for {} despite download failure",
+                    filename,
+                )
+                return existing.id
+            logger.error(
+                "No seed image available for {} (last error: {})",
+                filename,
+                last_exc,
+            )
+            return None
 
     if existing:
         existing.file_url = file_url
@@ -176,3 +243,25 @@ async def get_or_create_media(
     session.add(media)
     await session.flush()
     return media.id
+
+
+async def clear_storage_before_seed() -> None:
+    """Remove stored seed assets before re-seeding (testing / dev)."""
+    if settings.SEED_CLEAR_ALL_STORAGE:
+        if not settings.is_development:
+            logger.warning(
+                "SEED_CLEAR_ALL_STORAGE is set but APP_ENV is not development — skipping"
+            )
+            return
+        storage = get_storage_provider()
+        deleted = await storage.delete_prefix("")
+        logger.info("Cleared all storage objects before seed ({} files)", deleted)
+        return
+
+    if not settings.SEED_CLEAR_STORAGE:
+        return
+
+    storage = get_storage_provider()
+    deleted = await storage.delete_prefix("seed")
+    logger.info("Cleared seed/ storage before seed ({} files)", deleted)
+

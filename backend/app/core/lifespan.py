@@ -7,6 +7,7 @@ from fastapi import FastAPI
 from loguru import logger
 
 from app.core.config import settings
+from app.bootstrap.seed_runner import get_seed_status, schedule_background_seed
 
 
 @asynccontextmanager
@@ -22,10 +23,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """
     logger.info("Starting {} in {} mode", settings.APP_NAME, settings.APP_ENV)
 
-    # Startup
-    # Database connection pool is lazily created by SQLAlchemy
-    # Additional startup tasks (cache warmup, connection checks)
-    # should be added here in future phases
+    schedule_background_seed()
 
     yield
 

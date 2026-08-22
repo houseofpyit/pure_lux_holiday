@@ -33,6 +33,17 @@ class StorageProvider(ABC):
         """
         ...
 
+    async def delete_prefix(self, prefix: str) -> int:
+        """Delete all files under a storage prefix.
+
+        Args:
+            prefix: Folder prefix (e.g. ``seed`` or ``general/blog``).
+
+        Returns:
+            Number of files deleted. Default implementation deletes nothing.
+        """
+        return 0
+
     @abstractmethod
     async def delete_file(self, file_path: str) -> bool:
         """Delete a file from storage.

@@ -14,8 +14,7 @@ until alembic upgrade head; do
 done
 
 if [ "${RUN_SEED:-true}" = "true" ]; then
-  echo "Seeding database (admin, CMS content, packages)..."
-  python scripts/seed.py
+  echo "Bootstrap seed will run in the background after the API starts (RUN_SEED=true)."
 fi
 
 WORKERS="${UVICORN_WORKERS:-2}"

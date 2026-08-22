@@ -37,6 +37,12 @@ class Settings(BaseSettings):
     SEED_ADMIN_EMAIL: str = "admin@plh.com"
     SEED_ADMIN_PASSWORD: str = ""
     SEED_ADMIN_NAME: str = "Super Admin"
+    # When true, delete seed/ objects from storage before re-seeding (testing).
+    SEED_CLEAR_STORAGE: bool = True
+    # When true (development only), wipe the entire storage bucket/folder before seed.
+    SEED_CLEAR_ALL_STORAGE: bool = False
+    # When true, bootstrap seed runs in the background on API startup.
+    RUN_SEED: bool = True
 
     # Database
     DATABASE_URL: str = (

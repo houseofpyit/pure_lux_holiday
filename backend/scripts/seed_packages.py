@@ -123,7 +123,10 @@ async def seed_dataset(session: AsyncSession) -> None:
         banner_image_id = None
         if pkg_data.get("banner_image_url"):
             banner_image_id = await get_or_create_media(
-                session, pkg_data["banner_image_url"], f"pkg_banner_{slug}.jpg"
+                session,
+                pkg_data["banner_image_url"],
+                f"pkg_banner_{slug}.jpg",
+                fallback_url=pkg_data.get("featured_image_url"),
             )
 
         if not pkg:
