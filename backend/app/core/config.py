@@ -6,6 +6,23 @@ from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
+def _parse_bool_env(value: object, *, field_name: str) -> bool:
+    """Parse common .env boolean strings (true/false, 1/0, yes/no)."""
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    normalized = str(value).strip().lower()
+    if normalized in {"true", "1", "yes", "on"}:
+        return True
+    if normalized in {"false", "0", "no", "off", ""}:
+        return False
+    raise ValueError(
+        f"{field_name} must be true or false (got {value!r}). "
+        f"Check your .env — common typo: 'falsex' instead of 'false'."
+    )
+
+
 class Settings(BaseSettings):
     """Application settings loaded from environment variables.
 
@@ -73,6 +90,11 @@ class Settings(BaseSettings):
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5174",
     ]
+
+    @field_validator("DEBUG", "RUN_SEED", "SEED_CLEAR_STORAGE", "SEED_CLEAR_ALL_STORAGE", mode="before")
+    @classmethod
+    def parse_bool_settings(cls, value: object, info) -> bool:
+        return _parse_bool_env(value, field_name=str(info.field_name).upper())
 
     @property
     def is_development(self) -> bool:
